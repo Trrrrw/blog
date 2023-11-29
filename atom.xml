@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Trrrrw</title>
+  <icon>https://cdn.jsdelivr.net/gh/Trrrrw/image-hosting@master/images/Avatar.6a6hwam389o0.webp</icon>
+  
+  <link href="https://www.trrw.tech/atom.xml" rel="self"/>
+  
+  <link href="https://www.trrw.tech/"/>
+  <updated>2023-10-03T04:29:15.316Z</updated>
+  <id>https://www.trrw.tech/</id>
+  
+  <author>
+    <name>Trrrrw</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows11上配置C/C++环境</title>
+    <link href="https://www.trrw.tech/posts/ff9f69eaa147/"/>
+    <id>https://www.trrw.tech/posts/ff9f69eaa147/</id>
+    <published>2023-09-06T13:53:01.000Z</published>
+    <updated>2023-10-03T04:29:15.316Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;MinGW&quot;&gt;&lt;a href=&quot;#MinGW&quot; class=&quot;headerlink&quot; title=&quot;MinGW&quot;&gt;&lt;/a&gt;MinGW&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;MinGW: A native Windows port of the GNU</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Windows11" scheme="https://www.trrw.tech/tags/Windows11/"/>
+    
+    <category term="C" scheme="https://www.trrw.tech/tags/C/"/>
+    
+    <category term="C++" scheme="https://www.trrw.tech/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创建pip包并发布到PyPI上</title>
+    <link href="https://www.trrw.tech/posts/609a0bd64ee4/"/>
+    <id>https://www.trrw.tech/posts/609a0bd64ee4/</id>
+    <published>2023-05-21T07:21:00.000Z</published>
+    <updated>2023-07-18T13:04:06.287Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;新建项目&quot;&gt;&lt;a href=&quot;#新建项目&quot; class=&quot;headerlink&quot; title=&quot;新建项目&quot;&gt;&lt;/a&gt;新建项目&lt;/h1&gt;&lt;p&gt;假设项目名为&lt;code&gt;example&lt;/code&gt;，则项目结构如下：&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Python" scheme="https://www.trrw.tech/tags/Python/"/>
+    
+    <category term="GitHub" scheme="https://www.trrw.tech/tags/GitHub/"/>
+    
+    <category term="Git" scheme="https://www.trrw.tech/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Minecraft搭建本地服务器</title>
+    <link href="https://www.trrw.tech/posts/710faa8e4e83/"/>
+    <id>https://www.trrw.tech/posts/710faa8e4e83/</id>
+    <published>2022-12-13T14:31:54.000Z</published>
+    <updated>2023-09-17T05:09:47.501Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Java&quot;&gt;&lt;a href=&quot;#Java&quot; class=&quot;headerlink&quot; title=&quot;Java&quot;&gt;&lt;/a&gt;Java&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Java 17(1.17及以上版本)&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Minecraft" scheme="https://www.trrw.tech/tags/Minecraft/"/>
+    
+    <category term="我的世界" scheme="https://www.trrw.tech/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/"/>
+    
+    <category term="FRP" scheme="https://www.trrw.tech/tags/FRP/"/>
+    
+    <category term="内网穿透" scheme="https://www.trrw.tech/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Termux安装配置</title>
+    <link href="https://www.trrw.tech/posts/4cb956e99d39/"/>
+    <id>https://www.trrw.tech/posts/4cb956e99d39/</id>
+    <published>2022-11-16T08:14:27.000Z</published>
+    <updated>2023-07-18T13:08:36.125Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;下载地址&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Termux" scheme="https://www.trrw.tech/tags/Termux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Python获取番剧信息（二）</title>
+    <link href="https://www.trrw.tech/posts/dbdf19caba5f/"/>
+    <id>https://www.trrw.tech/posts/dbdf19caba5f/</id>
+    <published>2022-09-13T15:06:06.000Z</published>
+    <updated>2023-09-17T05:09:46.565Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note blue icon-padding flat&quot;&gt;&lt;i class=&quot;note-icon fa-solid fa-circle-exclamation&quot;&gt;&lt;/i&gt;&lt;p&gt;A python script for</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Python" scheme="https://www.trrw.tech/tags/Python/"/>
+    
+    <category term="番剧" scheme="https://www.trrw.tech/tags/%E7%95%AA%E5%89%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Python获取番剧信息（一）</title>
+    <link href="https://www.trrw.tech/posts/ee89c0cd5301/"/>
+    <id>https://www.trrw.tech/posts/ee89c0cd5301/</id>
+    <published>2022-08-10T05:02:12.000Z</published>
+    <updated>2023-09-17T05:09:46.907Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note blue icon-padding flat&quot;&gt;&lt;i class=&quot;note-icon fa-solid fa-circle-exclamation&quot;&gt;&lt;/i&gt;&lt;p&gt;在使用Hexo插件：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Python" scheme="https://www.trrw.tech/tags/Python/"/>
+    
+    <category term="番剧" scheme="https://www.trrw.tech/tags/%E7%95%AA%E5%89%A7/"/>
+    
+    <category term="爬虫" scheme="https://www.trrw.tech/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在本地搭建Wordpress</title>
+    <link href="https://www.trrw.tech/posts/3efceb4d94ea/"/>
+    <id>https://www.trrw.tech/posts/3efceb4d94ea/</id>
+    <published>2022-07-04T14:25:27.000Z</published>
+    <updated>2023-09-17T05:09:47.193Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Wordpress&quot;&gt;&lt;a href=&quot;#Wordpress&quot; class=&quot;headerlink&quot; title=&quot;Wordpress&quot;&gt;&lt;/a&gt;Wordpress&lt;/h1&gt;&lt;h2 id=&quot;安装WAMP&quot;&gt;&lt;a href=&quot;#安装WAMP&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Wordpress" scheme="https://www.trrw.tech/tags/Wordpress/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于Hexo搭建blog网站</title>
+    <link href="https://www.trrw.tech/posts/ed0c34999780/"/>
+    <id>https://www.trrw.tech/posts/ed0c34999780/</id>
+    <published>2022-07-04T14:24:42.000Z</published>
+    <updated>2023-09-17T05:09:46.229Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note blue icon-padding flat&quot;&gt;&lt;i class=&quot;note-icon fa-solid fa-circle-exclamation&quot;&gt;&lt;/i&gt;&lt;p&gt;推荐在&lt;code&gt;git bash&lt;/code&gt;中执行&lt;br&gt;可以去看&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="GitHub" scheme="https://www.trrw.tech/tags/GitHub/"/>
+    
+    <category term="Git" scheme="https://www.trrw.tech/tags/Git/"/>
+    
+    <category term="Hexo" scheme="https://www.trrw.tech/tags/Hexo/"/>
+    
+    <category term="Node.js" scheme="https://www.trrw.tech/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android-Kotlin笔记</title>
+    <link href="https://www.trrw.tech/posts/ba8aba482ff9/"/>
+    <id>https://www.trrw.tech/posts/ba8aba482ff9/</id>
+    <published>2022-07-03T03:53:00.000Z</published>
+    <updated>2023-07-18T13:08:36.125Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Kotlin&quot;&gt;&lt;a href=&quot;#Kotlin&quot; class=&quot;headerlink&quot; title=&quot;Kotlin&quot;&gt;&lt;/a&gt;Kotlin&lt;/h1&gt;&lt;h2 id=&quot;类class&quot;&gt;&lt;a href=&quot;#类class&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://www.trrw.tech/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Android" scheme="https://www.trrw.tech/tags/Android/"/>
+    
+    <category term="Kotlin" scheme="https://www.trrw.tech/tags/Kotlin/"/>
+    
+  </entry>
+  
+</feed>
