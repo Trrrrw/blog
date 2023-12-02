@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Trrrrw</title>
-  <icon>https://cdn.jsdelivr.net/gh/Trrrrw/image-hosting@master/images/Avatar.6a6hwam389o0.webp</icon>
+  <icon>https://www.trrw.tech/assets/img/avatar.avif</icon>
   
   <link href="https://www.trrw.tech/atom.xml" rel="self"/>
   
