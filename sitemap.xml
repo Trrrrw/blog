@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.trrw.tech/posts/fb5008860724/</loc>
+    
+    <lastmod>2024-02-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.trrw.tech/genshin/other/index-8</loc>
     
     <lastmod>2024-02-08</lastmod>
@@ -200,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-1</loc>
+    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-2</loc>
     
     <lastmod>2024-02-08</lastmod>
     
@@ -209,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-2</loc>
+    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-1</loc>
     
     <lastmod>2024-02-08</lastmod>
     
@@ -299,7 +308,7 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-1</loc>
+    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-0</loc>
     
     <lastmod>2024-02-08</lastmod>
     
@@ -308,7 +317,7 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-0</loc>
+    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-1</loc>
     
     <lastmod>2024-02-08</lastmod>
     
@@ -1588,134 +1597,148 @@
 
   <url>
     <loc>https://www.trrw.tech/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://www.trrw.tech/tags/Android/</loc>
-    <lastmod>2024-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/tags/Kotlin/</loc>
-    <lastmod>2024-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.trrw.tech/tags/Minecraft/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/FRP/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/tags/Termux/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <loc>https://www.trrw.tech/tags/Android/</loc>
+    <lastmod>2024-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/tags/Kotlin/</loc>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/Windows11/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/C/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/C/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/Python/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/%E7%95%AA%E5%89%A7/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/%E7%88%AC%E8%99%AB/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/tags/Termux/</loc>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/GitHub/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/Git/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/Wordpress/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/Hexo/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.trrw.tech/tags/Node-js/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <lastmod>2024-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/tags/AI/</loc>
+    <lastmod>2024-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/tags/GPT-SoVITS/</loc>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -1723,15 +1746,15 @@
 
   
   <url>
-    <loc>https://www.trrw.tech/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <loc>https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-02-08</lastmod>
+    <loc>https://www.trrw.tech/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

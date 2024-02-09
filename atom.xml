@@ -6,7 +6,7 @@
   <link href="https://www.trrw.tech/atom.xml" rel="self"/>
   
   <link href="https://www.trrw.tech/"/>
-  <updated>2023-11-30T07:16:06.434Z</updated>
+  <updated>2024-02-09T15:04:28.883Z</updated>
   <id>https://www.trrw.tech/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>让女武神为自己读小说</title>
+    <link href="https://www.trrw.tech/posts/fb5008860724/"/>
+    <id>https://www.trrw.tech/posts/fb5008860724/</id>
+    <published>2024-02-09T12:43:20.000Z</published>
+    <updated>2024-02-09T15:04:28.883Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最终效果：&lt;br&gt;&lt;video controls width=&quot;100%&quot;&gt;&lt;/p&gt;
+&lt;source</summary>
+        
+      
+    
+    
+    
+    
+    <category term="AI" scheme="https://www.trrw.tech/tags/AI/"/>
+    
+    <category term="GPT-SoVITS" scheme="https://www.trrw.tech/tags/GPT-SoVITS/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows11上配置C/C++环境</title>
