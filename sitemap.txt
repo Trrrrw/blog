@@ -21,8 +21,8 @@ https://www.trrw.tech/genshin/EP/index-2
 https://www.trrw.tech/genshin/EP/index-1
 https://www.trrw.tech/genshin/EP/index-0
 https://www.trrw.tech/genshin/JourneyOfTaste/index-0
-https://www.trrw.tech/genshin/versionSpecialProgram/index-2
 https://www.trrw.tech/genshin/versionSpecialProgram/index-1
+https://www.trrw.tech/genshin/versionSpecialProgram/index-2
 https://www.trrw.tech/genshin/versionSpecialProgram/index-0
 https://www.trrw.tech/genshin/cutscene/index-1
 https://www.trrw.tech/genshin/cutscene/index-0
@@ -127,8 +127,8 @@ https://www.trrw.tech/sr/data_classified.json
 https://www.trrw.tech/zzz/data_classified.json
 https://www.trrw.tech/sr/data_stored.json
 https://www.trrw.tech/bh3/other/index-6
-https://www.trrw.tech/bh3/other/index-3
 https://www.trrw.tech/bh3/other/index-4
+https://www.trrw.tech/bh3/other/index-3
 https://www.trrw.tech/bh3/other/index-5
 https://www.trrw.tech/bh3/other/index-2
 https://www.trrw.tech/bh3/other/index-1
@@ -176,10 +176,6 @@ https://www.trrw.tech/posts/609a0bd64ee4/
 https://www.trrw.tech/tags/
 https://www.trrw.tech/categories/
 https://www.trrw.tech/
-https://www.trrw.tech/tags/Minecraft/
-https://www.trrw.tech/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/
-https://www.trrw.tech/tags/FRP/
-https://www.trrw.tech/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/
 https://www.trrw.tech/tags/Android/
 https://www.trrw.tech/tags/Kotlin/
 https://www.trrw.tech/tags/Windows11/
@@ -192,9 +188,13 @@ https://www.trrw.tech/tags/Termux/
 https://www.trrw.tech/tags/GitHub/
 https://www.trrw.tech/tags/Git/
 https://www.trrw.tech/tags/Wordpress/
+https://www.trrw.tech/tags/Minecraft/
+https://www.trrw.tech/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/
+https://www.trrw.tech/tags/FRP/
+https://www.trrw.tech/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/
 https://www.trrw.tech/tags/Hexo/
 https://www.trrw.tech/tags/Node-js/
 https://www.trrw.tech/tags/AI/
 https://www.trrw.tech/tags/GPT-SoVITS/
-https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/
 https://www.trrw.tech/categories/%E7%AC%94%E8%AE%B0/
+https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/
