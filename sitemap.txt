@@ -6,6 +6,7 @@ https://www.trrw.tech/tags/
 https://www.trrw.tech/zzz/data_classified.json
 https://www.trrw.tech/zzz/data_stored.json
 https://www.trrw.tech/zzz/
+https://www.trrw.tech/genshin/versionTrailer/index-0
 https://www.trrw.tech/genshin/versionTrailer/index-1
 https://www.trrw.tech/genshin/versionTrailer/index-2
 https://www.trrw.tech/genshin/versionTrailer/index-3
@@ -107,10 +108,11 @@ https://www.trrw.tech/genshin/timeline/index-9
 https://www.trrw.tech/genshin/versionSpecialProgram/index-0
 https://www.trrw.tech/genshin/versionSpecialProgram/index-1
 https://www.trrw.tech/genshin/versionSpecialProgram/index-2
-https://www.trrw.tech/genshin/versionTrailer/index-0
 https://www.trrw.tech/categories/
 https://www.trrw.tech/games/
 https://www.trrw.tech/genshin/data_classified.json
+https://www.trrw.tech/bh3/themeSong/index-0
+https://www.trrw.tech/bh3/timeline/index-0
 https://www.trrw.tech/bh3/timeline/index-1
 https://www.trrw.tech/bh3/timeline/index-10
 https://www.trrw.tech/bh3/timeline/index-2
@@ -171,8 +173,6 @@ https://www.trrw.tech/bh3/other/index-3
 https://www.trrw.tech/bh3/other/index-4
 https://www.trrw.tech/bh3/other/index-5
 https://www.trrw.tech/bh3/other/index-6
-https://www.trrw.tech/bh3/themeSong/index-0
-https://www.trrw.tech/bh3/timeline/index-0
 https://www.trrw.tech/posts/ba8aba482ff9/
 https://www.trrw.tech/posts/710faa8e4e83/
 https://www.trrw.tech/posts/0b85d0a727be/
