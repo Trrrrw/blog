@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.trrw.tech/tags/</loc>
-    
-    <lastmod>2024-08-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.trrw.tech/zzz/data_classified.json</loc>
     
     <lastmod>2024-08-30</lastmod>
@@ -30,15 +21,6 @@
   
   <url>
     <loc>https://www.trrw.tech/zzz/</loc>
-    
-    <lastmod>2024-08-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/sr/versionTrailer/index-0</loc>
     
     <lastmod>2024-08-30</lastmod>
     
@@ -245,25 +227,7 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/timeline/index-4</loc>
-    
-    <lastmod>2024-08-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/timeline/index-40</loc>
-    
-    <lastmod>2024-08-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/timeline/index-41</loc>
+    <loc>https://www.trrw.tech/tags/</loc>
     
     <lastmod>2024-08-30</lastmod>
     
@@ -705,6 +669,24 @@
   
   <url>
     <loc>https://www.trrw.tech/sr/versionSpecialProgram/index-0</loc>
+    
+    <lastmod>2024-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/sr/versionTrailer/index-0</loc>
+    
+    <lastmod>2024-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/sr/versionTrailer/index-1</loc>
     
     <lastmod>2024-08-30</lastmod>
     
@@ -1208,6 +1190,33 @@
   </url>
   
   <url>
+    <loc>https://www.trrw.tech/genshin/timeline/index-4</loc>
+    
+    <lastmod>2024-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/timeline/index-40</loc>
+    
+    <lastmod>2024-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/timeline/index-41</loc>
+    
+    <lastmod>2024-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.trrw.tech/categories/</loc>
     
     <lastmod>2024-08-30</lastmod>
@@ -1218,33 +1227,6 @@
   
   <url>
     <loc>https://www.trrw.tech/games/</loc>
-    
-    <lastmod>2024-08-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/bh3/other/index-2</loc>
-    
-    <lastmod>2024-08-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/bh3/other/index-3</loc>
-    
-    <lastmod>2024-08-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/bh3/other/index-4</loc>
     
     <lastmod>2024-08-30</lastmod>
     
@@ -1802,6 +1784,33 @@
   </url>
   
   <url>
+    <loc>https://www.trrw.tech/bh3/other/index-2</loc>
+    
+    <lastmod>2024-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/bh3/other/index-3</loc>
+    
+    <lastmod>2024-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/bh3/other/index-4</loc>
+    
+    <lastmod>2024-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.trrw.tech/posts/ba8aba482ff9/</loc>
     
     <lastmod>2024-08-30</lastmod>
@@ -1919,6 +1928,15 @@
   </url>
   
   <url>
+    <loc>https://www.trrw.tech/Gallery/</loc>
+    
+    <lastmod>2024-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.trrw.tech/Gallery/quote/</loc>
     
     <lastmod>2024-08-30</lastmod>
@@ -1929,15 +1947,6 @@
   
   <url>
     <loc>https://www.trrw.tech/Gallery/sr/</loc>
-    
-    <lastmod>2024-08-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/Gallery/</loc>
     
     <lastmod>2024-08-30</lastmod>
     
