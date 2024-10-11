@@ -38,6 +38,15 @@
   </url>
   
   <url>
+    <loc>https://www.trrw.tech/sr/myriadCelestiaTrailer/index-0</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.trrw.tech/sr/myriadCelestiaTrailer/index-1</loc>
     
     <lastmod>2024-10-11</lastmod>
@@ -443,6 +452,15 @@
   </url>
   
   <url>
+    <loc>https://www.trrw.tech/sr/</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.trrw.tech/sr/data_stored.json</loc>
     
     <lastmod>2024-10-11</lastmod>
@@ -452,7 +470,61 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/sr/</loc>
+    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-0</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-1</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-2</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-3</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/timeline/index-21</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/timeline/index-22</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/timeline/index-23</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -767,42 +839,6 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-0</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-1</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-2</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/versionSpecialProgram/index-3</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.trrw.tech/genshin/versionTrailer/index-0</loc>
     
     <lastmod>2024-10-11</lastmod>
@@ -947,7 +983,7 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/sr/myriadCelestiaTrailer/index-0</loc>
+    <loc>https://www.trrw.tech/genshin/data_classified.json</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -956,7 +992,7 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/data_classified.json</loc>
+    <loc>https://www.trrw.tech/genshin/</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -974,7 +1010,79 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/</loc>
+    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-2</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-4</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-5</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-6</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-7</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/cutscene/index-0</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/cutscene/index-1</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-3</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/genshin/cutscene/index-2</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -1280,7 +1388,7 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/timeline/index-21</loc>
+    <loc>https://www.trrw.tech/bh3/data_classified.json</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -1289,7 +1397,7 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/timeline/index-22</loc>
+    <loc>https://www.trrw.tech/bh3/data_stored.json</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -1298,7 +1406,7 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/timeline/index-23</loc>
+    <loc>https://www.trrw.tech/bh3/</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -1317,6 +1425,33 @@
   
   <url>
     <loc>https://www.trrw.tech/games/</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/bh3/eFanWorks/index-0</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/bh3/hkHall/index-0</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trrw.tech/bh3/hkHall/index-1</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -1649,6 +1784,15 @@
   </url>
   
   <url>
+    <loc>https://www.trrw.tech/genshin/characterDemo/index-6</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.trrw.tech/genshin/characterTrailer/index-0</loc>
     
     <lastmod>2024-10-11</lastmod>
@@ -1712,123 +1856,6 @@
   </url>
   
   <url>
-    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-2</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-3</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-4</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-5</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-6</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/collectedMiscellany/index-7</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/cutscene/index-0</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/cutscene/index-1</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/cutscene/index-2</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/genshin/characterDemo/index-6</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/bh3/data_classified.json</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/bh3/data_stored.json</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/bh3/</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.trrw.tech/bh3/animatedShort/index-0</loc>
     
     <lastmod>2024-10-11</lastmod>
@@ -1866,33 +1893,6 @@
   
   <url>
     <loc>https://www.trrw.tech/bh3/cutscene/index-0</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/bh3/eFanWorks/index-0</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/bh3/hkHall/index-0</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.trrw.tech/bh3/hkHall/index-1</loc>
     
     <lastmod>2024-10-11</lastmod>
     
