@@ -57,7 +57,6 @@
         if (!false && key.startsWith('pjax')) return
         const globalFn = parent.globalFn || {}
         globalFn[key] = globalFn[key] || {}
-        if (name && globalFn[key][name]) return
         globalFn[key][name || Object.keys(globalFn[key]).length] = fn
         parent.globalFn = globalFn
       }
@@ -161,7 +160,8 @@ btf.addGlobalFn('pjaxComplete', () => {
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-10-30 20:44:09'
+  postUpdate: '2024-11-04 08:36:31',
+  isShuoshuo: false
 }</script><link rel="stylesheet" href="https://at.alicdn.com/t/c/font_3843343_h3fokw6c2q7.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Trrrrw" type="application/atom+xml">
 </head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "/./assets/img/lazyload-placeholder.gif" data-lazy-src="/./assets/img/avatar.avif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fa-solid fa-compass"></i><span> 目录</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa-solid fa-file-lines"></i><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/posts/710faa8e4e83/"><i class="fa-fw iconfont icon-minecraft"></i><span> Minecraft</span></a></li><li><a class="site-page child" href="/posts/3efceb4d94ea/"><i class="fa-fw fa-brands fa-wordpress"></i><span> Wordpress</span></a></li><li><a class="site-page child" href="/posts/ed0c34999780/"><i class="fa-fw iconfont icon-hexo"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/posts/4cb956e99d39/"><i class="fa-fw fa-solid fa-terminal"></i><span> Termux</span></a></li><li><a class="site-page child" href="/tags/%E7%95%AA%E5%89%A7/"><i class="fa-fw fa fa-film"></i><span> Bangumi</span></a></li><li><a class="site-page child" href="/posts/ba8aba482ff9/"><i class="fa-fw fa-brands fa-android"></i><span> Android-Kotlin</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa-solid fa-heart-pulse"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa-solid fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa-brands fa-bilibili"></i><span> 追番</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fa-solid fa-gamepad"></i><span> 小游戏</span></a></li><li><a class="site-page child" href="/bh3/"><i class="fa-fw fa-solid fa-b"></i><span> 崩坏3</span></a></li><li><a class="site-page child" href="/genshin/"><i class="fa-fw iconfont icon-amber"></i><span> 原神</span></a></li><li><a class="site-page child" href="/sr/"><i class="fa-fw fa-solid fa-train"></i><span> 崩坏：星穹铁道</span></a></li><li><a class="site-page child" href="/zzz/"><i class="fa-fw fa-solid fa-z"></i><span> 绝区零</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa-solid fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(https://www.trrw.tech/assets/img/pixiv-88871057.avif);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Trrrrw</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fa-solid fa-compass"></i><span> 目录</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa-solid fa-file-lines"></i><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/posts/710faa8e4e83/"><i class="fa-fw iconfont icon-minecraft"></i><span> Minecraft</span></a></li><li><a class="site-page child" href="/posts/3efceb4d94ea/"><i class="fa-fw fa-brands fa-wordpress"></i><span> Wordpress</span></a></li><li><a class="site-page child" href="/posts/ed0c34999780/"><i class="fa-fw iconfont icon-hexo"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/posts/4cb956e99d39/"><i class="fa-fw fa-solid fa-terminal"></i><span> Termux</span></a></li><li><a class="site-page child" href="/tags/%E7%95%AA%E5%89%A7/"><i class="fa-fw fa fa-film"></i><span> Bangumi</span></a></li><li><a class="site-page child" href="/posts/ba8aba482ff9/"><i class="fa-fw fa-brands fa-android"></i><span> Android-Kotlin</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa-solid fa-heart-pulse"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa-solid fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa-brands fa-bilibili"></i><span> 追番</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fa-solid fa-gamepad"></i><span> 小游戏</span></a></li><li><a class="site-page child" href="/bh3/"><i class="fa-fw fa-solid fa-b"></i><span> 崩坏3</span></a></li><li><a class="site-page child" href="/genshin/"><i class="fa-fw iconfont icon-amber"></i><span> 原神</span></a></li><li><a class="site-page child" href="/sr/"><i class="fa-fw fa-solid fa-train"></i><span> 崩坏：星穹铁道</span></a></li><li><a class="site-page child" href="/zzz/"><i class="fa-fw fa-solid fa-z"></i><span> 绝区零</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa-solid fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">追番列表</h1></div></header><main class="layout hide-aside" id="content-inner"><div id="page"><div id="article-container">
 <blockquote>
@@ -176,7 +176,7 @@ btf.addGlobalFn('pjaxComplete', () => {
 <div class="bangumi-tabs">
     <a class="bangumi-tab" id="bangumi-tab1" href="javascript:;" rel="external" target="_self" onclick="return false">
     想看
-    (46)</a>
+    (47)</a>
     <a class="bangumi-tab" id="bangumi-tab2" href="javascript:;" rel="external" target="_self" onclick="return false">
         在看
         (5)</a>
@@ -187,6 +187,45 @@ btf.addGlobalFn('pjaxComplete', () => {
 <div>
     <div id="bangumi-item1">
         
+        
+        <div class="bangumi-item">
+    <div class="bangumi-picture"><img src= "/./assets/img/lazyload-placeholder.gif" data-lazy-src="https://lain.bgm.tv/r/400/pic/cover/l/d5/d7/72941_q1DiW.jpg"  data-src="https://lain.bgm.tv/r/400/pic/cover/l/d5/d7/72941_q1DiW.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://bangumi.tv/subject/72941">斩服少女</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" style="color:#f2a9b7;">
+                
+                <span class="bangumi-info-item">
+                <span class="bangumi-info-total">全25话</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-type">
+                    <span class="bangumi-info-label">类型</span> <em>动画</em>
+                </span>
+                <span class="bangumi-info-item bangumi-wish">
+                    <span class="bangumi-info-label">想看</span> <em>3913</em>
+                </span>
+                <span class="bangumi-info-item bangumi-doing">
+                    <span class="bangumi-info-label">在看</span> <em>1985</em>
+                </span>
+                <span class="bangumi-info-item bangumi-collect">
+                    <span class="bangumi-info-label">已看</span> <em>18935</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>8</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-summary" >
+            <p>简介：本故事以被武力和恐怖支配的本能字学院为舞台，以为父报仇的转校生少女为中心， 围绕着在学园中“执牛耳者”的学生及学生会四大天王间的激战故事展开。缠流子和鬼龙院皋月，两人为本作的主人公。在本作中，皋月用极制服的力量支配着学园， 而流子为查明父亲死亡的真相而与皋月对抗。在这由力量支配的学园中，由于手持片太刀铗的转校生的到来，引起了动乱， 这一场各个能力者均被打倒的故事因此而开始！</p>
+        </div>
+    </div>
+</div>
+
         
         <div class="bangumi-item">
     <div class="bangumi-picture"><img src= "/./assets/img/lazyload-placeholder.gif" data-lazy-src="https://lain.bgm.tv/r/400/pic/cover/l/40/01/393037_I7mvN.jpg"  data-src="https://lain.bgm.tv/r/400/pic/cover/l/40/01/393037_I7mvN.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
@@ -207,13 +246,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>1927</em>
+                    <span class="bangumi-info-label">想看</span> <em>1945</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>3691</em>
+                    <span class="bangumi-info-label">在看</span> <em>3643</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>5769</em>
+                    <span class="bangumi-info-label">已看</span> <em>5914</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.3</em>
@@ -246,13 +285,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>881</em>
+                    <span class="bangumi-info-label">想看</span> <em>885</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
                     <span class="bangumi-info-label">在看</span> <em>322</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>3040</em>
+                    <span class="bangumi-info-label">已看</span> <em>3044</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>6.4</em>
@@ -285,13 +324,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>1039</em>
+                    <span class="bangumi-info-label">想看</span> <em>1045</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>1832</em>
+                    <span class="bangumi-info-label">在看</span> <em>1812</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>3109</em>
+                    <span class="bangumi-info-label">已看</span> <em>3160</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7</em>
@@ -324,13 +363,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>1096</em>
+                    <span class="bangumi-info-label">想看</span> <em>1099</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>1312</em>
+                    <span class="bangumi-info-label">在看</span> <em>1310</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>5024</em>
+                    <span class="bangumi-info-label">已看</span> <em>5053</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.1</em>
@@ -363,13 +402,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>1423</em>
+                    <span class="bangumi-info-label">想看</span> <em>1432</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>2268</em>
+                    <span class="bangumi-info-label">在看</span> <em>2235</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>4532</em>
+                    <span class="bangumi-info-label">已看</span> <em>4611</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.4</em>
@@ -402,13 +441,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>1902</em>
+                    <span class="bangumi-info-label">想看</span> <em>1909</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>4946</em>
+                    <span class="bangumi-info-label">在看</span> <em>4829</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>7261</em>
+                    <span class="bangumi-info-label">已看</span> <em>7445</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.3</em>
@@ -441,13 +480,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>658</em>
+                    <span class="bangumi-info-label">想看</span> <em>668</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>25</em>
+                    <span class="bangumi-info-label">在看</span> <em>24</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>147</em>
+                    <span class="bangumi-info-label">已看</span> <em>152</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>6.7</em>
@@ -480,13 +519,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>1210</em>
+                    <span class="bangumi-info-label">想看</span> <em>1215</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>174</em>
+                    <span class="bangumi-info-label">在看</span> <em>175</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>3901</em>
+                    <span class="bangumi-info-label">已看</span> <em>3908</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.2</em>
@@ -519,13 +558,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>1415</em>
+                    <span class="bangumi-info-label">想看</span> <em>1420</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>312</em>
+                    <span class="bangumi-info-label">在看</span> <em>316</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>7274</em>
+                    <span class="bangumi-info-label">已看</span> <em>7292</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.4</em>
@@ -558,13 +597,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>2285</em>
+                    <span class="bangumi-info-label">想看</span> <em>2292</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>775</em>
+                    <span class="bangumi-info-label">在看</span> <em>776</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>8670</em>
+                    <span class="bangumi-info-label">已看</span> <em>8683</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.4</em>
@@ -597,10 +636,10 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>691</em>
+                    <span class="bangumi-info-label">想看</span> <em>692</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>214</em>
+                    <span class="bangumi-info-label">在看</span> <em>215</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
                     <span class="bangumi-info-label">已看</span> <em>1392</em>
@@ -1968,7 +2007,7 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">在看</span> <em>35</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>120</em>
+                    <span class="bangumi-info-label">已看</span> <em>121</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>2.9</em>
@@ -2013,13 +2052,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>1481</em>
+                    <span class="bangumi-info-label">想看</span> <em>1475</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>5256</em>
+                    <span class="bangumi-info-label">在看</span> <em>5168</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>7368</em>
+                    <span class="bangumi-info-label">已看</span> <em>7490</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>5.8</em>
@@ -2052,13 +2091,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>2331</em>
+                    <span class="bangumi-info-label">想看</span> <em>2324</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>7676</em>
+                    <span class="bangumi-info-label">在看</span> <em>7541</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>14520</em>
+                    <span class="bangumi-info-label">已看</span> <em>14893</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>8</em>
@@ -2094,10 +2133,10 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">想看</span> <em>1228</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>3265</em>
+                    <span class="bangumi-info-label">在看</span> <em>3223</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>3312</em>
+                    <span class="bangumi-info-label">已看</span> <em>3354</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>5.4</em>
@@ -2259,13 +2298,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>530</em>
+                    <span class="bangumi-info-label">想看</span> <em>534</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>68</em>
+                    <span class="bangumi-info-label">在看</span> <em>70</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>763</em>
+                    <span class="bangumi-info-label">已看</span> <em>789</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.4</em>
@@ -2301,10 +2340,10 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">想看</span> <em>949</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>95</em>
+                    <span class="bangumi-info-label">在看</span> <em>97</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>2715</em>
+                    <span class="bangumi-info-label">已看</span> <em>2723</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.5</em>
@@ -2337,13 +2376,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>819</em>
+                    <span class="bangumi-info-label">想看</span> <em>820</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>110</em>
+                    <span class="bangumi-info-label">在看</span> <em>111</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>37101</em>
+                    <span class="bangumi-info-label">已看</span> <em>37193</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>8</em>
@@ -3195,13 +3234,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>1109</em>
+                    <span class="bangumi-info-label">想看</span> <em>1110</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
-                    <span class="bangumi-info-label">在看</span> <em>114</em>
+                    <span class="bangumi-info-label">在看</span> <em>115</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>6235</em>
+                    <span class="bangumi-info-label">已看</span> <em>6249</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.7</em>
@@ -3507,13 +3546,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>1191</em>
+                    <span class="bangumi-info-label">想看</span> <em>1195</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
                     <span class="bangumi-info-label">在看</span> <em>298</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>5571</em>
+                    <span class="bangumi-info-label">已看</span> <em>5584</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.6</em>
@@ -4716,13 +4755,13 @@ btf.addGlobalFn('pjaxComplete', () => {
                     <span class="bangumi-info-label">类型</span> <em>动画</em>
                 </span>
                 <span class="bangumi-info-item bangumi-wish">
-                    <span class="bangumi-info-label">想看</span> <em>1251</em>
+                    <span class="bangumi-info-label">想看</span> <em>1255</em>
                 </span>
                 <span class="bangumi-info-item bangumi-doing">
                     <span class="bangumi-info-label">在看</span> <em>435</em>
                 </span>
                 <span class="bangumi-info-item bangumi-collect">
-                    <span class="bangumi-info-label">已看</span> <em>4176</em>
+                    <span class="bangumi-info-label">已看</span> <em>4183</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.3</em>
