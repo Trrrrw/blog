@@ -5,6 +5,7 @@ slug = 'links'
 toc = false
 readingTime = false
 license = false
+
 [[links]]
 title = "唯之为之"
 description = "悄悄留住时光的模样"
@@ -15,6 +16,11 @@ title = "Moe-hacker"
 description = "有只猫叫萌系黑客会遇到物理panic吗"
 website = "https://moe-hacker.github.io/"
 image = "https://cdn.jsdelivr.net/gh/Moe-hacker/moe-hacker.github.io@master/img/face.jpg"
+[[links]]
+title = "失迹の博客"
+description = "猫与茶与代码与你：一位 编程 / 设计 / ACGN 爱好者的博客。"
+website = "https://blog.reincarnatey.net/"
+image = "https://npm.elemecdn.com/@mitr-yuzr/vno-dmego-yuzr@latest/assets/img/headimg.png"
 [[links]]
 title = "Hugo"
 description = "Hugo是世界上最快的网站构建框架之一"
@@ -40,17 +46,19 @@ title = "UserScript"
 description = "Trrrrw/UserScript"
 website = "https://script.trrw.tech/"
 image = "https://img.55bbs.com/uploadimg/ico/2021/0119/1611047366185072.jpg"
+
 [menu.main]
 weight = 3
 [menu.main.params]
 icon = "link"
 +++
 
-## 申请方法
-添加本站后，在此页面**留言**，或者给我发<a href="mailto:contact@trrw.tech" target="_blank" title="Email" rel="me"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path><path d="M3 7l9 6l9 -6"></path></svg>邮件</a>，格式如下：
-```yaml
-name: 你的名字
-link: 网站链接
-avatar: 你的头像
-descr: 网站描述
-```
+在此页面留言，或者给我发邮件。
+
+> 名称：Trrrrw's Blog
+> 
+> 简介：Spending a lifetime to taste the love and pain.
+> 
+> 地址：https://www.trrw.tech/
+> 
+> 头像：https://www.trrw.tech/img/avatar_hu_c6302ec3e028259a.png
