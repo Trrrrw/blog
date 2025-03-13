@@ -1,0 +1,53 @@
+# Configure main menu and social menu
+[[main]]
+identifier = "home"
+name = "主页"
+url = "/"
+weight = -1
+[main.params]
+icon = "home"
+
+[[social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/Trrrrw"
+weight = 1
+
+[social.params]
+icon = "brand-github"
+
+[[social]]
+identifier = "bilibili"
+name = "BiliBili"
+url = "https://space.bilibili.com/93625252"
+weight = 2
+
+[social.params]
+icon = "brand-bilibili"
+
+[[social]]
+identifier = "twitter"
+name = "Twitter"
+url = "https://x.com/trrrrrrrw"
+weight = 3
+
+[social.params]
+icon = "brand-x"
+
+[[social]]
+identifier = "email"
+name = "Email"
+url = "mailto:contact@trrw.tech"
+weight = 4
+
+[social.params]
+icon = "mail"
+
+[[social]]
+identifier = "rss"
+name = "Rss"
+url = "/index.xml"
+weight = 5
+
+[social.params]
+icon = "rss"

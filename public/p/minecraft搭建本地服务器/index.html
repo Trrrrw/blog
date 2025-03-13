@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8888&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Java Java 17(1.17及以上版本) https://www.oracle.com/java/technologies/downloads/\nJava 8(1.17以下版本) https://www.java.com/en/download/\n原版 server.jar https://mcversions.net/ 在Stable Releases栏选择需要的版本点击Download，选择Download Server Jar 下载完成后将server.jar文件放在一个文件夹里，右键文件夹空白区域选择在终端中打开(Win10可能需要按住Shift点击右键)。 在终端中运行以下命令：\n1 java -Xms1024M -Xmx1024M -jar server.jar nogui 此时会在文件夹中生成一些文件，并显示提示：\n1 You need to agree to the EULA in order to run the server. Go to eula.txt for more info. 回到文件夹打开eula.txt，将false改为true:\n1 eula=true 此时再回到终端运行这条命令：\n1 java -Xms1024M -Xmx1024M -jar server.jar nogui Windows防火墙可能会有提示，允许即可。 当终端显示下面这行时说明服务器开启成功：\n1 Done (30.927s)! For help, type &#34;help&#34; 在终端中向上找，找到这一行：\n1 Starting Minecraft server on *:25565 其中冒号后面的数字就是你服务器运行的端口(可能会不一样)，此时服务器运行在：\n1 127.0.0.1:25565 现在你本地打开一个Minecraft客户端(不要关闭终端)，就是平时自己玩的那个。进游戏点击多人游戏，选择添加服务器，服务器名随意，服务器地址填上面那个地址。 此时是进不去服务器的，还要打开文件夹中的server.properties文件，修改以下选项：\n1 online-mode=false 这个选项开启之后会验证正版账号，也就是说开启之后只有正版才能进去，所以需要关闭。其他选项的意思参考Minecraft Wiki\n此时在终端输入stop关闭服务器(之后关闭服务器都这么关，这样它会保存你的存档)，再运行启动服务器的命令：\n1 java -Xms1024M -Xmx1024M -jar server.jar nogui 这时客户端就能进服务器了🎉，但此时服务端还只是运行在你自己的电脑上，只有你自己和局域网内的电脑可以连接，接下来就是将本地端口共享给其他人。\nFabric版 从原版安装 到Fabric官网下载最新安装器，点击中间的Download for Windows 双击打开下载的文件，选择服务端，选择正确的游戏版本，加载器版本默认最新即可，安装位置选择原版服务器路径，点击安装，安装完成后可以关闭安装界面。 此时服务器的启动指令变为： 1 java -Xms1024M -Xmx1024M -jar fabric-server-launch.jar nogui 直接安装 下载对应版本的jar文件，放到空文件夹中，并在该路径下在终端中运行：\n">
+<title>Minecraft搭建本地服务器</title>
+
+<link rel='canonical' href='http://localhost:8888/p/minecraft%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Minecraft搭建本地服务器">
+<meta property='og:description' content="Java Java 17(1.17及以上版本) https://www.oracle.com/java/technologies/downloads/\nJava 8(1.17以下版本) https://www.java.com/en/download/\n原版 server.jar https://mcversions.net/ 在Stable Releases栏选择需要的版本点击Download，选择Download Server Jar 下载完成后将server.jar文件放在一个文件夹里，右键文件夹空白区域选择在终端中打开(Win10可能需要按住Shift点击右键)。 在终端中运行以下命令：\n1 java -Xms1024M -Xmx1024M -jar server.jar nogui 此时会在文件夹中生成一些文件，并显示提示：\n1 You need to agree to the EULA in order to run the server. Go to eula.txt for more info. 回到文件夹打开eula.txt，将false改为true:\n1 eula=true 此时再回到终端运行这条命令：\n1 java -Xms1024M -Xmx1024M -jar server.jar nogui Windows防火墙可能会有提示，允许即可。 当终端显示下面这行时说明服务器开启成功：\n1 Done (30.927s)! For help, type &#34;help&#34; 在终端中向上找，找到这一行：\n1 Starting Minecraft server on *:25565 其中冒号后面的数字就是你服务器运行的端口(可能会不一样)，此时服务器运行在：\n1 127.0.0.1:25565 现在你本地打开一个Minecraft客户端(不要关闭终端)，就是平时自己玩的那个。进游戏点击多人游戏，选择添加服务器，服务器名随意，服务器地址填上面那个地址。 此时是进不去服务器的，还要打开文件夹中的server.properties文件，修改以下选项：\n1 online-mode=false 这个选项开启之后会验证正版账号，也就是说开启之后只有正版才能进去，所以需要关闭。其他选项的意思参考Minecraft Wiki\n此时在终端输入stop关闭服务器(之后关闭服务器都这么关，这样它会保存你的存档)，再运行启动服务器的命令：\n1 java -Xms1024M -Xmx1024M -jar server.jar nogui 这时客户端就能进服务器了🎉，但此时服务端还只是运行在你自己的电脑上，只有你自己和局域网内的电脑可以连接，接下来就是将本地端口共享给其他人。\nFabric版 从原版安装 到Fabric官网下载最新安装器，点击中间的Download for Windows 双击打开下载的文件，选择服务端，选择正确的游戏版本，加载器版本默认最新即可，安装位置选择原版服务器路径，点击安装，安装完成后可以关闭安装界面。 此时服务器的启动指令变为： 1 java -Xms1024M -Xmx1024M -jar fabric-server-launch.jar nogui 直接安装 下载对应版本的jar文件，放到空文件夹中，并在该路径下在终端中运行：\n">
+<meta property='og:url' content='http://localhost:8888/p/minecraft%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+<meta property='og:site_name' content='Trrrrw&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Minecraft' /><meta property='article:tag' content='我的世界' /><meta property='article:tag' content='FRP' /><meta property='article:tag' content='内网穿透' /><meta property='article:published_time' content='2022-12-13T22:31:54&#43;08:00'/><meta property='article:modified_time' content='2022-12-13T22:31:54&#43;08:00'/><meta property='og:image' content='https://th.bing.com/th/id/R.70d270fd1f6b92f71d8270139739452f?rik=iZaoU4fUsfs4dw&amp;riu=http%3a%2f%2fgamesminecraft.org%2fgames%2fimg%2fminecraft-inspiration_2676x1505.jpg&amp;ehk=yFg%2fq8SlDV1%2bFASrbAb93%2b%2fIFYJyOe9FhDaTQv5nhBU%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0' />
+<meta name="twitter:title" content="Minecraft搭建本地服务器">
+<meta name="twitter:description" content="Java Java 17(1.17及以上版本) https://www.oracle.com/java/technologies/downloads/\nJava 8(1.17以下版本) https://www.java.com/en/download/\n原版 server.jar https://mcversions.net/ 在Stable Releases栏选择需要的版本点击Download，选择Download Server Jar 下载完成后将server.jar文件放在一个文件夹里，右键文件夹空白区域选择在终端中打开(Win10可能需要按住Shift点击右键)。 在终端中运行以下命令：\n1 java -Xms1024M -Xmx1024M -jar server.jar nogui 此时会在文件夹中生成一些文件，并显示提示：\n1 You need to agree to the EULA in order to run the server. Go to eula.txt for more info. 回到文件夹打开eula.txt，将false改为true:\n1 eula=true 此时再回到终端运行这条命令：\n1 java -Xms1024M -Xmx1024M -jar server.jar nogui Windows防火墙可能会有提示，允许即可。 当终端显示下面这行时说明服务器开启成功：\n1 Done (30.927s)! For help, type &#34;help&#34; 在终端中向上找，找到这一行：\n1 Starting Minecraft server on *:25565 其中冒号后面的数字就是你服务器运行的端口(可能会不一样)，此时服务器运行在：\n1 127.0.0.1:25565 现在你本地打开一个Minecraft客户端(不要关闭终端)，就是平时自己玩的那个。进游戏点击多人游戏，选择添加服务器，服务器名随意，服务器地址填上面那个地址。 此时是进不去服务器的，还要打开文件夹中的server.properties文件，修改以下选项：\n1 online-mode=false 这个选项开启之后会验证正版账号，也就是说开启之后只有正版才能进去，所以需要关闭。其他选项的意思参考Minecraft Wiki\n此时在终端输入stop关闭服务器(之后关闭服务器都这么关，这样它会保存你的存档)，再运行启动服务器的命令：\n1 java -Xms1024M -Xmx1024M -jar server.jar nogui 这时客户端就能进服务器了🎉，但此时服务端还只是运行在你自己的电脑上，只有你自己和局域网内的电脑可以连接，接下来就是将本地端口共享给其他人。\nFabric版 从原版安装 到Fabric官网下载最新安装器，点击中间的Download for Windows 双击打开下载的文件，选择服务端，选择正确的游戏版本，加载器版本默认最新即可，安装位置选择原版服务器路径，点击安装，安装完成后可以关闭安装界面。 此时服务器的启动指令变为： 1 java -Xms1024M -Xmx1024M -jar fabric-server-launch.jar nogui 直接安装 下载对应版本的jar文件，放到空文件夹中，并在该路径下在终端中运行：\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://th.bing.com/th/id/R.70d270fd1f6b92f71d8270139739452f?rik=iZaoU4fUsfs4dw&amp;riu=http%3a%2f%2fgamesminecraft.org%2fgames%2fimg%2fminecraft-inspiration_2676x1505.jpg&amp;ehk=yFg%2fq8SlDV1%2bFASrbAb93%2b%2fIFYJyOe9FhDaTQv5nhBU%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0' />
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_c6302ec3e028259a.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">❤️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Trrrrw&#39;s Blog</a></h1>
+            <h2 class="site-description">Spending a lifetime to taste the love and pain</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Trrrrw'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/93625252'
+                        target="_blank"
+                        title="BiliBili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://x.com/trrrrrrrw'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:contact@trrw.tech'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="Rss"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#原版">原版</a></li>
+    <li><a href="#fabric版">Fabric版</a>
+      <ol>
+        <li><a href="#从原版安装">从原版安装</a></li>
+        <li><a href="#直接安装">直接安装</a></li>
+      </ol>
+    </li>
+    <li><a href="#forge版">Forge版</a></li>
+    <li><a href="#内网穿透">内网穿透</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/minecraft%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                
+                    <img src="https://th.bing.com/th/id/R.70d270fd1f6b92f71d8270139739452f?rik=iZaoU4fUsfs4dw&amp;riu=http%3a%2f%2fgamesminecraft.org%2fgames%2fimg%2fminecraft-inspiration_2676x1505.jpg&amp;ehk=yFg%2fq8SlDV1%2bFASrbAb93%2b%2fIFYJyOe9FhDaTQv5nhBU%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" loading="lazy" alt="Featured image of post Minecraft搭建本地服务器" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%95%99%E7%A8%8B/" >
+                教程
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/minecraft%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/">Minecraft搭建本地服务器</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 13, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="java">Java
+</h2><ul>
+<li>
+<p>Java 17(1.17及以上版本)
+<a class="link" href="https://www.oracle.com/java/technologies/downloads/"  target="_blank" rel="noopener"
+    >https://www.oracle.com/java/technologies/downloads/</a></p>
+</li>
+<li>
+<p>Java 8(1.17以下版本)
+<a class="link" href="https://www.java.com/zh-CN/download/"  target="_blank" rel="noopener"
+    >https://www.java.com/en/download/</a></p>
+</li>
+</ul>
+<hr>
+<h2 id="原版">原版
+</h2><ul>
+<li>server.jar   <a class="link" href="https://mcversions.net/"  target="_blank" rel="noopener"
+    >https://mcversions.net/</a>
+在<code>Stable Releases</code>栏选择需要的版本点击<code>Download</code>，选择<code>Download Server Jar</code></li>
+</ul>
+<p>下载完成后将<code>server.jar</code>文件放在一个文件夹里，右键文件夹空白区域选择<code>在终端中打开</code>(Win10可能需要按住Shift点击右键)。
+在终端中运行以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">java</span> <span class="n">-Xms1024M</span> <span class="n">-Xmx1024M</span> <span class="n">-jar</span> <span class="n">server</span><span class="p">.</span><span class="py">jar</span> <span class="n">nogui</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时会在文件夹中生成一些文件，并显示提示：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">You</span> <span class="n">need</span> <span class="n">to</span> <span class="n">agree</span> <span class="n">to</span> <span class="n">the</span> <span class="n">EULA</span> <span class="k">in</span> <span class="n">order</span> <span class="n">to</span> <span class="n">run</span> <span class="n">the</span> <span class="n">server</span><span class="p">.</span> <span class="n">Go</span> <span class="n">to</span> <span class="n">eula</span><span class="p">.</span><span class="py">txt</span> <span class="k">for</span> <span class="n">more</span> <span class="n">info</span><span class="p">.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>回到文件夹打开<code>eula.txt</code>，将<code>false</code>改为<code>true</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">eula=true
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时再回到终端运行这条命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">java</span> <span class="n">-Xms1024M</span> <span class="n">-Xmx1024M</span> <span class="n">-jar</span> <span class="n">server</span><span class="p">.</span><span class="py">jar</span> <span class="n">nogui</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Windows防火墙可能会有提示，允许即可。
+当终端显示下面这行时说明服务器开启成功：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">Done</span> <span class="p">(</span><span class="mf">30</span><span class="p">.</span><span class="n">927s</span><span class="p">)!</span> <span class="k">For</span> <span class="n">help</span><span class="p">,</span> <span class="nb">type </span><span class="s2">&#34;help&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在终端中向上找，找到这一行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">Starting</span> <span class="n">Minecraft</span> <span class="n">server</span> <span class="n">on</span> <span class="p">*</span><span class="err">:</span><span class="mf">25565</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中冒号后面的数字就是你服务器运行的端口(可能会不一样)，此时服务器运行在：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="mf">127.0</span><span class="p">.</span><span class="py">0</span><span class="p">.</span><span class="mf">1</span><span class="err">:</span><span class="mf">25565</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>现在你本地打开一个Minecraft客户端(不要关闭终端)，就是平时自己玩的那个。进游戏点击多人游戏，选择添加服务器，服务器名随意，服务器地址填上面那个地址。
+此时是进不去服务器的，还要打开文件夹中的<code>server.properties</code>文件，修改以下选项：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">online-mode=false
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>这个选项开启之后会验证正版账号，也就是说开启之后只有正版才能进去，所以需要关闭。其他选项的意思参考<a class="link" href="https://minecraft.fandom.com/zh/wiki/Server.properties#Minecraft%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B1%9E%E6%80%A7"  target="_blank" rel="noopener"
+    >Minecraft Wiki</a></p></blockquote>
+<p>此时在终端输入<code>stop</code>关闭服务器(之后关闭服务器都这么关，这样它会保存你的存档)，再运行启动服务器的命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">java -Xms1024M -Xmx1024M -jar server.jar nogui
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这时客户端就能进服务器了🎉，但此时服务端还只是运行在你自己的电脑上，只有你自己和局域网内的电脑可以连接，接下来就是将本地端口共享给其他人。</p>
+<hr>
+<h2 id="fabric版">Fabric版
+</h2><h3 id="从原版安装">从原版安装
+</h3><ol>
+<li>到<a class="link" href="https://fabricmc.net/use"  target="_blank" rel="noopener"
+    >Fabric官网</a>下载最新安装器，点击中间的<code>Download for Windows</code></li>
+<li>双击打开下载的文件，选择<code>服务端</code>，选择<strong>正确的游戏版本</strong>，加载器版本默认最新即可，安装位置选择原版服务器路径，点击安装，安装完成后可以关闭安装界面。</li>
+<li>此时服务器的启动指令变为：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">java -Xms1024M -Xmx1024M -jar fabric-server-launch.jar nogui
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="直接安装">直接安装
+</h3><p><a class="link" href="https://fabricmc.net/use/server/"  target="_blank" rel="noopener"
+    >下载</a>对应版本的jar文件，放到空文件夹中，并在该路径下在终端中运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">java -Xmx2G -jar 下载的文件名 nogui
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>同样需要调整<code>eula.txt</code>和<code>server.properties</code>文件。</p>
+<hr>
+<h2 id="forge版">Forge版
+</h2><ol>
+<li>在<a class="link" href="https://files.minecraftforge.net/net/minecraftforge/forge/"  target="_blank" rel="noopener"
+    >官网</a>下载正确版本的jar文件</li>
+<li>双击运行，选择<code>Insall server</code>并选择一个空文件夹，点击确定
+<img src="/p/minecraft%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/Forge-installer.webp"
+	width="417"
+	height="444"
+	
+	loading="lazy"
+	
+		alt="Forge-installer"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="93"
+		data-flex-basis="225px"
+	
+>
+<img src="/p/minecraft%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/Forge-installing.webp"
+	width="882"
+	height="591"
+	
+	loading="lazy"
+	
+		alt="Forge-installing"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
+	
+></li>
+<li>安装完成后目录：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">folder/
+</span></span><span class="line"><span class="cl">├── libraries
+</span></span><span class="line"><span class="cl">├── run.bat
+</span></span><span class="line"><span class="cl">├── run.sh
+</span></span><span class="line"><span class="cl">├── user_jvm_args.txt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>双击运行<code>run.bat</code>即可，如果想要只弹出命令行窗口的话，可以用记事本打开<code>run.bat</code>，并在java开头那一行最后添加<code>空格nogui</code></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java @user_jvm_args.txt @libraries/net/minecraftforge/forge/1.20.1-47.0.1/win_args.txt %* nogui
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="内网穿透">内网穿透
+</h2><p>各种内网穿透工具官网都有详细的使用说明。</p>
+<ul>
+<li>OPENFRP 官网：<a class="link" href="https://www.openfrp.net/"  target="_blank" rel="noopener"
+    >www.openfrp.net</a></li>
+<li>OPENFRP 使用方法：<a class="link" href="https://docs.openfrp.net/"  target="_blank" rel="noopener"
+    >docs.openfrp.net</a></li>
+</ul>
+<hr>
+<p>参考文章：
+<a class="link" href="https://minecraft.fandom.com/zh/wiki/%E6%95%99%E7%A8%8B/%E6%9E%B6%E8%AE%BE%E6%9C%8D%E5%8A%A1%E5%99%A8"  target="_blank" rel="noopener"
+    >Minecraft Wiki/教程/架设服务器</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/minecraft/">Minecraft</a>
+        
+            <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/">我的世界</a>
+        
+            <a href="/tags/frp/">FRP</a>
+        
+            <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">内网穿透</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/">
+        
+        
+            <div class="article-image">
+                <img src="/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/pixiv-75321273.f7593286ba966d2c08c1a4c931499654.webp" 
+                        width="2560" 
+                        height="1440" 
+                        loading="lazy"
+                        alt="Featured image of post Windows11上配置C、C&#43;&#43;环境"
+                        
+                        data-hash="md5-91kyhrqWbSwIwaTJMUmWVA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows11上配置C、C&#43;&#43;环境</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/orb-slam3%E7%A8%A0%E5%AF%86%E5%BB%BA%E5%9B%BE/">
+        
+        
+            <div class="article-image">
+                <img src="/p/orb-slam3%E7%A8%A0%E5%AF%86%E5%BB%BA%E5%9B%BE/ORB-SLAM3-cover.b74fdf76e034782cdf98e3fe8800ed1c.webp" 
+                        width="1920" 
+                        height="1080" 
+                        loading="lazy"
+                        alt="Featured image of post ORB SLAM3稠密建图"
+                        
+                        data-hash="md5-t0/fduA0eCzfmOP&#43;iADtHA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ORB SLAM3稠密建图</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/orb-slam3%E8%BF%90%E8%A1%8C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/orb-slam3%E8%BF%90%E8%A1%8C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86/ORB-SLAM3-cover.b74fdf76e034782cdf98e3fe8800ed1c.webp" 
+                        width="1920" 
+                        height="1080" 
+                        loading="lazy"
+                        alt="Featured image of post ORB SLAM3运行自己的数据集"
+                        
+                        data-hash="md5-t0/fduA0eCzfmOP&#43;iADtHA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ORB SLAM3运行自己的数据集</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8wsl2%E4%B8%AD%E8%BF%90%E8%A1%8Corb-slam3/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%9C%A8wsl2%E4%B8%AD%E8%BF%90%E8%A1%8Corb-slam3/ORB-SLAM3-cover.b74fdf76e034782cdf98e3fe8800ed1c.webp" 
+                        width="1920" 
+                        height="1080" 
+                        loading="lazy"
+                        alt="Featured image of post 在WSL2中运行ORB SLAM3"
+                        
+                        data-hash="md5-t0/fduA0eCzfmOP&#43;iADtHA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在WSL2中运行ORB SLAM3</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BAblog%E7%BD%91%E7%AB%99/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BAblog%E7%BD%91%E7%AB%99/Hexo-cover.a5e94297d833a2579db8faed6d3611db.webp" 
+                        width="1920" 
+                        height="1080" 
+                        loading="lazy"
+                        alt="Featured image of post 基于Hexo搭建blog网站"
+                        
+                        data-hash="md5-pelCl9gzoleduPrtbTYR2w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">基于Hexo搭建blog网站</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"avatar":"","dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"lang":"","locale":{"admin":"Admin","placeholder":null},"placeholder":"","requiredMeta":["name","email","url"],"serverURL":"waline.trrw.tech","visitor":""});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2025 Trrrrw&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            <a href="https://icp.gov.moe/?keyword=20230421" target="_blank">萌ICP备20230421号</a> <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.5ce8f2ead2df1d50b726ceca3c620a881cbf3e0958cae3c1d8f0f000fffd3ae7.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

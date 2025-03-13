@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Trrrrw&#39;s Blog</title>
+        <link>http://localhost:8888/tags/</link>
+        <description>Recent content in Tags on Trrrrw&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 06 Sep 2023 21:53:01 +0800</lastBuildDate><atom:link href="http://localhost:8888/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>C</title>
+        <link>http://localhost:8888/tags/c/</link>
+        <pubDate>Wed, 06 Sep 2023 21:53:01 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/c/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>C&#43;&#43;</title>
+        <link>http://localhost:8888/tags/c&#43;&#43;/</link>
+        <pubDate>Wed, 06 Sep 2023 21:53:01 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/c&#43;&#43;/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows11</title>
+        <link>http://localhost:8888/tags/windows11/</link>
+        <pubDate>Wed, 06 Sep 2023 21:53:01 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/windows11/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>FRP</title>
+        <link>http://localhost:8888/tags/frp/</link>
+        <pubDate>Tue, 13 Dec 2022 22:31:54 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/frp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Minecraft</title>
+        <link>http://localhost:8888/tags/minecraft/</link>
+        <pubDate>Tue, 13 Dec 2022 22:31:54 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/minecraft/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>内网穿透</title>
+        <link>http://localhost:8888/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+        <pubDate>Tue, 13 Dec 2022 22:31:54 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>我的世界</title>
+        <link>http://localhost:8888/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/</link>
+        <pubDate>Tue, 13 Dec 2022 22:31:54 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>ORB-SLAM3</title>
+        <link>http://localhost:8888/tags/orb-slam3/</link>
+        <pubDate>Sun, 16 Oct 2022 15:16:01 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/orb-slam3/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ubuntu</title>
+        <link>http://localhost:8888/tags/ubuntu/</link>
+        <pubDate>Sun, 16 Oct 2022 15:16:01 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/ubuntu/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>WSL2</title>
+        <link>http://localhost:8888/tags/wsl2/</link>
+        <pubDate>Sun, 16 Oct 2022 15:16:01 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/wsl2/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Git</title>
+        <link>http://localhost:8888/tags/git/</link>
+        <pubDate>Mon, 04 Jul 2022 22:24:42 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GitHub</title>
+        <link>http://localhost:8888/tags/github/</link>
+        <pubDate>Mon, 04 Jul 2022 22:24:42 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/github/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Hexo</title>
+        <link>http://localhost:8888/tags/hexo/</link>
+        <pubDate>Mon, 04 Jul 2022 22:24:42 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/hexo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Node.js</title>
+        <link>http://localhost:8888/tags/node.js/</link>
+        <pubDate>Mon, 04 Jul 2022 22:24:42 +0800</pubDate>
+        
+        <guid>http://localhost:8888/tags/node.js/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
