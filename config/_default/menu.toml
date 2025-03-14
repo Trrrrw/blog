@@ -37,7 +37,7 @@ icon = "brand-x"
 [[social]]
 identifier = "email"
 name = "Email"
-url = "mailto:contact@trrw.tech"
+url = "mailto:wzhhenry@qq.com"
 weight = 4
 
 [social.params]

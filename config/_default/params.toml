@@ -106,15 +106,15 @@ autoCreateIssue = false
 
 [comments.waline]
 serverURL = "waline.trrw.tech"
-lang = ""
+lang = "zh-CN"
 visitor = ""
 avatar = ""
 emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
 requiredMeta = ["name", "email", "url"]
-placeholder = ""
+placeholder = "欢迎留下宝贵的评论！请留下正确的邮箱以便有回复时进行邮箱提醒，请勿发布任何与本文章无关的内容。"
 
 [comments.waline.locale]
-admin = "Admin"
+admin = "站长"
 
 [comments.twikoo]
 envId = ""
