@@ -6,6 +6,11 @@ toc = false
 readingTime = false
 license = false
 
+# [[links]]
+# title = "mancang"
+# description = "mancang"
+# website = "https://www.mancang.space/"
+# image = "https://weizwz.com/img/avatar/head.jpg"
 [[links]]
 title = "唯之为之"
 description = "悄悄留住时光的模样"

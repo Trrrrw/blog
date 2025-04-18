@@ -1,6 +1,8 @@
 +++
-title = '使用Hugo+Stack搭建博客'
 date = '2025-03-14T19:26:51+08:00'
+title = '使用Hugo+Stack搭建博客'
+tags = ['Hugo','Stack','GitHub','Vercel']
+categories = ['教程']
 image = 'cover.webp'
 +++
 
@@ -82,7 +84,7 @@ hugo server
 ```powershell
 Web Server is available at http://localhost:xxxx/ (bind address 127.0.0.1)
 ```
-然后在浏览器中打开这个`http://localhost:xxxx/`，就可以看到你的网站了。
+然后在浏览器中打开这个`http://localhost:xxxx/`，就可以看到你的网站了。你可以在这里实时看到你对网站的修改。(有些操作不会实时刷新，还是需要重新运行`hugo server`才能看到)
 > 但是这个端口每次启动都会变，如果想要端口不变的话可以在命令后面加上`-p 端口号`，
 > 如果想要局域网内的设备也可以访问的话可以在命令后面加上`--bind 0.0.0.0`。
 > ```powershell
@@ -92,7 +94,7 @@ Web Server is available at http://localhost:xxxx/ (bind address 127.0.0.1)
 
 ## 编写博客
 ### 文件结构
-文章的文件夹是放在`content/posts`文件夹下的，文件结构如下：
+文章的文件夹是放在`content/post`文件夹下的，文件结构如下：
 ```
 content
 └── post
@@ -114,8 +116,8 @@ hugo new post/my-first-post/index.md
 ```toml
 +++
 date = '' # 文章创建时间，这个会自动生成
-title = '' # 文章标题
 draft = true # 文章是否为草稿，true为草稿，此时你在网页中是看不到这篇文章的，需要将其设为false或者删除这个参数
+title = '' # 文章标题
 description = '' # 文章简介
 image = '' # 文章封面图片
 comments = true # 文章是否允许评论，true为允许，false为不允许
