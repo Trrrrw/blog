@@ -2,7 +2,7 @@
 mainSections = ["post"]
 # Output page's full content in RSS.
 rssFullContent = true
-favicon = "/favicon.png"
+favicon = "/favicon.webp"
 
 [footer]
 since = 2022
@@ -19,7 +19,7 @@ subtitle = "Spending a lifetime to taste the love and pain."
 [sidebar.avatar]
 enabled = true
 local = true
-src = "img/avatar.png"
+src = "img/avatar.webp"
 
 [article]
 headingAnchor = false
