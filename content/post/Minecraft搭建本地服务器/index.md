@@ -3,7 +3,7 @@ date = '2022-12-13T22:31:54+08:00'
 title = 'Minecraft搭建本地服务器'
 tags = ['Minecraft','我的世界','FRP','内网穿透']
 categories = ['教程']
-image= 'https://th.bing.com/th/id/R.70d270fd1f6b92f71d8270139739452f?rik=iZaoU4fUsfs4dw&riu=http%3a%2f%2fgamesminecraft.org%2fgames%2fimg%2fminecraft-inspiration_2676x1505.jpg&ehk=yFg%2fq8SlDV1%2bFASrbAb93%2b%2fIFYJyOe9FhDaTQv5nhBU%3d&risl=&pid=ImgRaw&r=0'
+image= 'cover.webp'
 +++
 
 

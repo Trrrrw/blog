@@ -2,6 +2,7 @@
 date = '2025-03-16T22:14:12+08:00'
 draft = true
 title = 'VSCode 配置 C、C++ 编程运行环境'
+image = 'cover.webp'
 +++
 
 ## 前言
