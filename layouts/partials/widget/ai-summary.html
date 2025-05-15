@@ -1,0 +1,44 @@
+{{ if (.Context.Scratch.Get "TOCEnabled") }}
+    <section class="widget archives">
+        <div class="widget-icon">
+            {{ partial "helper/icon" "infinity" }}
+        </div>
+        <h2 class="widget-title section-title">{{ "AI 总结" }}</h2>
+        
+        <div class="widget--toc">
+            {{ $apiKey := getenv "HUGO_AI_API_KEY" }}
+            {{ $data := dict }}
+            {{ $url := printf "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=%s" $apiKey }}
+            {{ $articleContent := .Context.Content }}
+            {{ $prompt := printf "用一小段话总结下面这篇文章：%s。使用中文回答" $articleContent }}
+            {{ $payload := dict "contents" (slice (dict "parts" (slice (dict "text" $prompt)))) }}
+            {{ $jsonBody := $payload | jsonify }}
+            {{ $opts := dict
+                "method" "post"
+                "headers" (dict "Content-Type" "application/json")
+                "body" $jsonBody
+            }}
+            {{ with try (resources.GetRemote $url $opts) }}
+                {{ with .Err }}
+                    <p class="ai-summary">( ˘•ω•˘ ).oOஇ</p>
+                    {{ errorf "%s" . }}
+                {{ else with .Value }}
+                    {{ $data = .Content | transform.Unmarshal }}
+                    <p class="ai-summary">
+                        {{ index (index (index (index (index $data "candidates") 0) "content" "parts") 0) "text" }}
+                    </p>
+                {{ else }}
+                    <p class="ai-summary">( ˘•ω•˘ ).oOஇ</p>
+                    {{ errorf "Unable to get remote resource %q" $url }}
+                {{ end }}
+            {{ end }}
+        </div>
+        <style>
+            .ai-summary{
+                font-family: var(--article-font-family);
+                font-size: var(--article-font-size);
+                margin: 1.5em 1.5em;
+            }
+        </style>
+    </section>
+{{ end }}
