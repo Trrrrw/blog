@@ -67,3 +67,9 @@ icon = "link"
 > 地址：https://www.trrw.tech/
 > 
 > 头像：https://www.trrw.tech/img/avatar_hu_c6302ec3e028259a.png
+
+<style>
+.right-sidebar.sticky {
+    display: none;
+}
+</style>

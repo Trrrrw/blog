@@ -46,3 +46,9 @@ I'm a self-taught passionate Python developer from China 🇨🇳
 <a href="https://afdian.com/a/trrrrw?tab=home">
   <img align="right" alt="Trrrrw | afd" width="26px" src="https://raw.githubusercontent.com/Trrrrw/Trrrrw/master/assets/afd.svg" />
 </a>
+
+<style>
+.right-sidebar.sticky {
+    display: none;
+}
+</style>
