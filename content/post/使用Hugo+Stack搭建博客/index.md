@@ -190,3 +190,6 @@ yum install -y golang
 2. [Stack主题文档](https://stack.jimmycai.com/)
 3. [失迹の博客 | 使用 Hugo + Stack 简单搭建一个博客](https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/)
 4. [rizkidoank | Deploy Hugo to Vercel](https://www.rizkidoank.com/2024/02/26/deploy-hugo-to-vercel/)
+
+### 文章封面
+[Roommates](https://www.pixiv.net/artworks/126362911)
