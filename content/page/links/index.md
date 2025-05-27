@@ -42,9 +42,14 @@ description = "Your complete platform for the web"
 website = "https://vercel.com/"
 image = "Vercel on Mobile - Vercelios-iOS-1024x1024.png"
 [[links]]
-title = "米哈游游戏视频"
-description = "整合米哈游游戏视频的网站"
+title = "影像档案架"
+description = "整合原神、崩铁、绝区零的官网视频"
 website = "https://hoyo-video.trrw.tech/"
+image = "https://hoyo-video.trrw.tech/pwa@1024.png"
+[[links]]
+title = "米哈游游戏日历订阅"
+description = "自动同步《原神》《星穹铁道》《绝区零》的官方活动日程到您的日历应用"
+website = "https://github.com/Trrrrw/hoyo_calendar"
 image = "米游社-iOS-1024x1024.png"
 [[links]]
 title = "UserScript"

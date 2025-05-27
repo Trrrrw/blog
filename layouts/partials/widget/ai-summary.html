@@ -20,7 +20,7 @@
             }}
             {{ with try (resources.GetRemote $url $opts) }}
                 {{ with .Err }}
-                    <p class="ai-summary typewriter">( ˘•ω•˘ ).oOஇ</p>
+                    <p class="ai-summary">( ˘•ω•˘ ).oOஇ</p>
                     {{ errorf "%s" . }}
                 {{ else with .Value }}
                     {{ $data = .Content | transform.Unmarshal }}
@@ -38,20 +38,6 @@
                 font-family: var(--article-font-family);
                 font-size: var(--article-font-size);
                 margin: 1.5em 1.5em;
-            }
-            .typewriter {
-                overflow: hidden;
-                white-space: pre-wrap;
-                word-break: break-word;
-                animation: typing 2s steps(40, end);
-            }
-            @keyframes typing {
-                from { 
-                    max-height: 0;
-                }
-                to { 
-                    max-height: 1000px;
-                }
             }
         </style>
     </section>
