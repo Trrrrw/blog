@@ -4,7 +4,6 @@ date = '2025-06-03T00:11:56+08:00'
 tags = []
 categories = []
 image = 'cover.webp'
-draft = true
 +++
 
 ## 添加环境变量
