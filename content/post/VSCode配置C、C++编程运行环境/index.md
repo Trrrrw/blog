@@ -33,7 +33,7 @@ image = 'cover.webp'
 ## Clang-Format
 由于Trae使用的是open-vsx的镜像作为市场，其中没有 C/C++ 这个插件
 
-![C/C++ 插件](extension-cc++.webp)
+![C/C++ 插件](extension-c.webp)
 
 所以想要格式化代码，需要使用 **Clang-Format** 这个插件  
 在下载插件前，需要先 [下载 **Clang-Format**](https://llvm.org/builds/)  
