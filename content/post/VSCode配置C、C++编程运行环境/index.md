@@ -1,7 +1,8 @@
 +++
-date = '2025-03-16T22:14:12+08:00'
-draft = true
 title = 'VSCode 配置 C、C++ 编程运行环境'
+date = '2025-06-02T23:03:45+08:00'
+tags = ['Trae','VSCode','C','C++','CMake','Clang-Format']
+categories = ['教程']
 image = 'cover.webp'
 +++
 
@@ -70,13 +71,26 @@ int main() {
 }
 ```
 
-此时 **Cmake 插件** 应该会自动弹出 **选择工具包的对话框**，选择第一个64位的即可
+用 **vscode** 或者 **Trae** 打开这个文件夹，此时 **CMake 插件** 应该会自动弹出 **选择工具包的对话框**，选择第一个64位的即可
 
 ![选择工具包](select-toolkit.webp)
 
+之后下面会的输出栏中会输出 **CMake** 的输出，如果中文部分出现乱码，需要在设置中搜索 **output**，然后找到 **Cmake: Output Log Encoding**，将其修改为 **utf-8**  
+之后每次修改 **CMakeLists.txt** 后，**CMake 插件** 都会自动重新生成项目，输出栏中也会输出 **CMake** 的输出
+
+![Cmake: Output Log Encoding](cmake-output-setting.webp)
+
+## 运行项目
+打开 **main.cpp**，点击 **左下角** 的 **在终端窗口中启动所选目标**
+
+![在终端窗口中启动所选目标](run-command.webp)
+
+## 后记
+这个文章只是记录一下环境配置的过程，平常不怎么写 **C/C++** 代码，之前也写过一个配置 **gcc** 的文章，但是那个 **gcc** 版本太低了。
+
 ## 附录
 ### 参考文献
-1. [HUGO中文文档](https://hugo.opendocs.io/)
+1. [vscode 内置cmake output窗口乱码](https://blog.csdn.net/braised_fish/article/details/116236406)
 
 ### 文章封面
 [セルマ](https://www.pixiv.net/artworks/126908719)
