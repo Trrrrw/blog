@@ -55,8 +55,8 @@ limit = 10
 [[widgets.page]]
 type = "toc"
 
-[[widgets.page]]
-type = "ai-summary"
+# [[widgets.page]]
+# type = "ai-summary"
 
 [opengraph.twitter]
 site = ""
