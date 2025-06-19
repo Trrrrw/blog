@@ -23,8 +23,8 @@ jobs:
               with:
                 switches: -avzr --delete
                 path: ./public/
-                remote_path: /opt/1panel/apps/openresty/openresty/www/sites/www.trrw.tech/index
+                remote_path: /opt/1panel/apps/openresty/openresty/www/sites/www.trrw.tech/index/
                 remote_host: ${{ secrets.SSH_IP }}
                 remote_port: ${{ secrets.SSH_PORT }}
                 remote_user: ${{ secrets.SSH_USER }}
-                remote_key: ${{ secrets.SSH_PRIVATE_KEY }
+                remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
