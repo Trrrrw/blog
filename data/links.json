@@ -1,0 +1,60 @@
+[
+    {
+        "title": "我的网站",
+        "links": [
+            {
+                "title": "Trrrrw's Blog",
+                "description": "Spending a lifetime to taste the love and pain",
+                "website": "https://www.trrw.tech/",
+                "image": "https://www.trrw.tech/favicon.webp"
+            },
+            {
+                "title": "影像档案架",
+                "description": "整合原神、崩铁、绝区零的官网视频",
+                "website": "https://hoyo-video.trrw.tech/",
+                "image": "https://hoyo-video.trrw.tech/pwa@1024.png"
+            },
+            {
+                "title": "游戏日历订阅",
+                "description": "自动同步官方活动日程到日历",
+                "website": "https://github.com/Trrrrw/hoyo_calendar",
+                "image": "米游社-iOS-1024x1024.png"
+            },
+            {
+                "title": "UserScript",
+                "description": "Trrrrw/UserScript",
+                "website": "https://script.trrw.tech/",
+                "image": "tampermonkey.svg"
+            }
+        ]
+    },
+    {
+        "title": "友链",
+        "links": [
+            {
+                "title": "唯知笔记",
+                "description": "探索知识的无限可能",
+                "website": "https://note.weizwz.com",
+                "image": "https://p.weizwz.com/logo_a4353391cbf0889b.webp"
+            },
+            {
+                "title": "Moe-hacker",
+                "description": "有只猫叫萌系黑客会遇到物理panic吗",
+                "website": "https://moe-hacker.github.io/",
+                "image": "https://cdn.jsdelivr.net/gh/Moe-hacker/moe-hacker.github.io@master/img/face.jpg"
+            },
+            {
+                "title": "失迹の博客",
+                "description": "猫与茶与代码与你：一位 编程 / 设计 / ACGN 爱好者的博客。",
+                "website": "https://blog.reincarnatey.net/",
+                "image": "https://npm.elemecdn.com/@mitr-yuzr/vno-dmego-yuzr@latest/assets/img/headimg.png"
+            },
+            {
+                "title": "满仓的博客",
+                "description": "满仓的博客",
+                "website": "https://www.mancang.space/",
+                "image": "https://www.mancang.space/img/avatar_hu_f509edb42ecc0ebd.png"
+            }
+        ]
+    }
+]
