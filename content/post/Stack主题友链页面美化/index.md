@@ -4,7 +4,6 @@ date = '2025-06-24T21:05:33+08:00'
 tags = ['Stack', 'Hugo']
 categories = ['教程']
 image = 'cover.webp'
-draft = true
 +++
 
 ## 前言
