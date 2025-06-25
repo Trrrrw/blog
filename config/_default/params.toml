@@ -6,7 +6,7 @@ favicon = "/favicon.webp"
 
 [footer]
 since = 2022
-customText = '<a href="https://icp.gov.moe/?keyword=20230421" target="_blank">萌ICP备20230421号</a>'
+customText = '<a href="https://icp.gov.moe/?keyword=20230421" target="_blank">皖ICP备2025089713号</a></br><a href="https://icp.gov.moe/?keyword=20230421" target="_blank">萌ICP备20230421号</a>'
 
 [dateFormat]
 published = "Jan 02, 2006"
