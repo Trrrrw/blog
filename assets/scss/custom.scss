@@ -12,9 +12,16 @@
             box-shadow: var(--shadow-l2);
             margin-bottom: 8px;
             border-radius: 10px;
+            transition: transform .2s;
 
             &:not(:nth-child(3n)) {
                 margin-right: 8px;
+            }
+
+            // 添加hover效果
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: var(--shadow-l3);
             }
         }
     }
@@ -27,10 +34,12 @@
     margin-left: 10px;
 }
 
-.article-list--compact.links {  // 缩小连接组标题与下面链接的距离
+.article-list--compact.links {
+    // 缩小连接组标题与下面链接的距离
     margin-top: -20px;
 }
 
-.article-image > img {  // 给文章卡片、友链卡片等的图标添加圆角
+.article-image>img {
+    // 给文章卡片、友链卡片等的图标添加圆角
     border-radius: 10px;
 }

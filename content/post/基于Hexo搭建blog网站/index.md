@@ -2,7 +2,7 @@
 title = '基于Hexo搭建blog网站'
 date = '2022-07-04T22:24:42+08:00'
 tags = ['Hexo','GitHub','Node.js','Git']
-categories = ['教程']
+categories = ['建站记录']
 image= 'Hexo-cover.webp'
 +++
 

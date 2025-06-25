@@ -2,7 +2,7 @@
 date = '2025-05-15T14:41:00+08:00'
 title = 'Hugo Stack主题配置'
 tags = ['Hugo','Stack','GitHub','Waline']
-categories = ['教程']
+categories = ['建站记录']
 image = 'cover.webp'
 +++
 

@@ -2,7 +2,7 @@
 title = 'Stack主题友链页面美化'
 date = '2025-06-24T21:05:33+08:00'
 tags = ['Stack', 'Hugo']
-categories = ['教程']
+categories = ['建站记录']
 image = 'cover.webp'
 +++
 
@@ -14,7 +14,7 @@ Stack默认的友链是一行一个，友链一多就会导致页面很长，影
 ### SCSS
 `assets\scss\custom.scss`
 ```scss
-//链接页面
+//链接页面//链接页面
 @media (min-width: 1024px) {
     .article-list--compact.links {
         display: grid;
@@ -28,9 +28,16 @@ Stack默认的友链是一行一个，友链一多就会导致页面很长，影
             box-shadow: var(--shadow-l2);
             margin-bottom: 8px;
             border-radius: 10px;
+            transition: transform .2s;
 
             &:not(:nth-child(3n)) {
                 margin-right: 8px;
+            }
+
+            // 添加hover效果
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: var(--shadow-l3);
             }
         }
     }
@@ -43,15 +50,18 @@ Stack默认的友链是一行一个，友链一多就会导致页面很长，影
     margin-left: 10px;
 }
 
-.article-list--compact.links {  // 缩小连接组标题与下面链接的距离
+.article-list--compact.links {
+    // 缩小连接组标题与下面链接的距离
     margin-top: -20px;
 }
 
-.article-image > img {  // 给文章卡片、友链卡片等的图标添加圆角
+.article-image>img {
+    // 给文章卡片、友链卡片等的图标添加圆角
     border-radius: 10px;
 }
 ```
-这里由于我用不到原博主的 `badge` 功能，所以将那一部分删掉了，并将所有卡片的图标都添加了圆角
+这里由于我用不到原博主的 `badge` 功能，所以将那一部分删掉了，并将所有卡片的图标都添加了圆角  
+给卡片添加了鼠标悬浮动画
 
 ### JSON
 `data\links.json`

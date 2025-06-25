@@ -2,7 +2,7 @@
 date = '2025-03-14T19:26:51+08:00'
 title = '使用Hugo+Stack搭建博客'
 tags = ['Hugo','Stack','GitHub','Vercel']
-categories = ['教程']
+categories = ['建站记录']
 image = 'cover.webp'
 +++
 

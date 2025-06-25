@@ -2,7 +2,7 @@
 title = 'Waline评论配置Server酱通知'
 date = '2025-06-03T00:11:56+08:00'
 tags = ['Waline','Server酱','Vercel','Github']
-categories = ['教程']
+categories = ['建站记录']
 image = 'cover.webp'
 +++
 
