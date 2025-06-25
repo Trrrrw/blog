@@ -132,6 +132,9 @@ icon = "home"
 - 归档页面创建这个文件即可：**content/page/archives/index.md**
 
 ### 链接
+这一部分可以参考 *「[Stack主题友链页面美化]({{< ref "Stack主题友链页面美化" >}})」*  
+下面是**Stack**默认的**links**页面实现方式
+
 ```markdown
 <!-- content/page/links/index.md -->
 
@@ -178,7 +181,27 @@ icon = "link"
 
 ### 关于、搜索
 - **关于**页面：**content/page/about/index.md**，就和文章一样写就行
-- **搜索**页面：**content/page/search/index.md**，一般不行要特殊配置
+- **搜索**页面：**content/page/search/index.md**，一般不需要特殊配置
+
+## 页脚
+### 版权声明
+```toml
+# config/_default/params.toml
+
+[footer]
+since = 2022    # 起始年份
+```
+此时页脚会自动生成 **© 起始年份 - 当前年份 网站标题**
+
+### 自定义文本
+```toml
+# config/_default/params.toml
+
+[footer]
+since = 2022    # 起始年份
+customText = '自定义内容'
+```
+可用于添加**ICP备案号**或自定义内容
 
 ## 分类
 分类文件夹是 **content/categories**  
