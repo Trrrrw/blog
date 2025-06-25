@@ -16,7 +16,7 @@ icon = "link"
 
 > 名称：Trrrrw's Blog
 > 
-> 简介：Spending a lifetime to taste the love and pain.
+> 简介：Spending a lifetime to taste the love and pain
 > 
 > 地址：https://www.trrw.tech/
 > 
