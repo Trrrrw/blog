@@ -264,6 +264,82 @@ admin = "站长"
 
 > 具体 Waline 的配置可以看 [Waline 文档](https://waline.js.org/guide/get-started/)
 
+## 网站加速
+如果你是将网站部署到自己服务器上，Hugo有一些资源可能会加载的比较慢，可以把这部分文件下载到本地
+### custom-font
+先从[custom-font.css](https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap)下载下来CSS文件，放到`assets\css\custom-font.css`  
+打开这个CSS，里面会有6个woff2文件链接，把这六个链接下载下来放到`static\fonts`文件夹中  
+然后修改CSS文件中的链接，将`https://fonts.gstatic.com/s/lato/v24`替换为`/fonts`
+
+然后创建并修改`layouts\partials\footer\components\custom-font.html`
+```html
+{{ $customFont := resources.Get "css/custom-font.css" | minify | fingerprint }}
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "{{ $customFont.RelPermalink }}";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+```
+### vibrant.min.js
+从[vibrant.min.js](https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js)下载`vibrant.min.js`文件，放到`static\js\vibrant.min.js`  
+创建并修改`data\external.yaml`
+```yaml
+Vibrant:
+    - src: /js/vibrant.min.js
+      integrity: sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=
+      type: script
+
+PhotoSwipe:
+    - src: https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js
+      integrity: sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=
+      type: script
+      defer: true
+
+    - src: https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js
+      integrity: sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=
+      type: script
+      defer: true
+
+    - src: https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css
+      type: style
+
+    - src: https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css
+      type: style
+
+KaTeX:
+    - src: https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+      integrity: sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV
+      type: style
+
+    - src: https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+      integrity: sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8
+      type: script
+      defer: true
+
+    - src: https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
+      integrity: sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05
+      type: script
+      defer: true
+
+Cactus:
+    - src: https://latest.cactus.chat/cactus.js
+      integrity:
+      type: script
+    - src: https://latest.cactus.chat/style.css
+      integrity:
+      type: style
+```
+下面的那些文件也是同理
+
+这感觉用处不大...主要是这个Waline太慢了(┬┬﹏┬┬)
+
+
 ## 附录
 ### 参考文献
 1. [HUGO中文文档](https://hugo.opendocs.io/)

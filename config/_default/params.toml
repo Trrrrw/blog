@@ -6,14 +6,20 @@ favicon = "/favicon.webp"
 
 [footer]
 since = 2022
-customText = '<a href="http://beian.miit.gov.cn/" target="_blank">皖ICP备2025089713号</a> | <a href="https://icp.gov.moe/?keyword=20230421" target="_blank">萌ICP备20230421号</a>'
+customText = """
+<a href="http://beian.miit.gov.cn/" target="_blank">皖ICP备2025089713号</a>
+ | 
+<a href="https://icp.gov.moe/?keyword=20230421" target="_blank">萌ICP备20230421号</a>
+<br>
+<img src="/备案图标.png" width="12"/> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=34162102003417" rel="noreferrer" target="_blank">皖公网安备34162102003417号</a>
+"""
 
 [dateFormat]
 published = "Jan 02, 2006"
 lastUpdated = "Jan 02, 2006 15:04 MST"
 
 [sidebar]
-emoji = "❤️"
+emoji = ""
 subtitle = "Spending a lifetime to taste the love and pain"
 
 [sidebar.avatar]
@@ -112,7 +118,10 @@ serverURL = "waline.trrw.tech"
 lang = "zh-CN"
 visitor = ""
 avatar = "img/Akkarin.jpg"
-emoji = ["https://npm.elemecdn.com/@waline/emojis@1.2.0/bilibili", "https://npm.elemecdn.com/@waline/emojis@1.2.0/weibo"]
+emoji = [
+    "https://npm.elemecdn.com/@waline/emojis@1.2.0/bilibili",
+    "https://npm.elemecdn.com/@waline/emojis@1.2.0/weibo",
+]
 requiredMeta = ["name", "email", "url"]
 placeholder = "欢迎留下宝贵的评论！请留下正确的邮箱以便有回复时进行邮箱提醒，请勿发布任何与本文章无关的内容。"
 
