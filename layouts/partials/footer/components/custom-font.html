@@ -1,8 +1,7 @@
-{{ $customFont := resources.Get "css/custom-font.css" | minify | fingerprint }}
 <script>
     (function () {
         const customFont = document.createElement('link');
-        customFont.href = "{{ $customFont.RelPermalink }}";
+        customFont.href = "/vendor/custom-font/custom-font.css";
 
         customFont.type = "text/css";
         customFont.rel = "stylesheet";

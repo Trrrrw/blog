@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/waline/waline.css"/>
+<link rel="stylesheet" href="/vendor/waline/waline.css"/>
 <div id="waline" class="waline-container"></div>
 <style>
     .waline-container {
@@ -44,7 +44,7 @@
 {{- end -}}
 
 <script type="module">
-    import { init } from '/waline/waline.js';
+    import { init } from '/vendor/waline/waline.js';
     init({{ $config | jsonify | safeJS }});
 </script>
 {{- end -}}
