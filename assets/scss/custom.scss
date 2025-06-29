@@ -1,4 +1,4 @@
-//链接页面
+// 链接页面
 @media (min-width: 1024px) {
     .article-list--compact.links {
         display: grid;
@@ -42,4 +42,30 @@
 .article-image>img {
     // 给文章卡片、友链卡片等的图标添加圆角
     border-radius: 10px;
+}
+
+// Waline
+:root {
+    --waline-theme-color: #34495e !important;
+    --waline-active-color: #34495e7b !important;
+}
+
+.wl-content a {
+    text-decoration: none;
+    box-shadow: 0 -2px rgba(var(--link-background-color), var(--link-background-opacity)) inset;
+    transition: all .3s ease;
+
+    &:hover {
+        box-shadow: 0 calc(-1rem * 2.2) rgba(var(--link-background-color), var(--link-background-opacity-hover)) inset;
+    }
+
+    @media (prefers-color-scheme:light) {
+        &:hover {
+            color: var(--waline-theme-color) !important;
+        }
+    }
+}
+
+.wl-header-item input {
+    font-size: .75em !important;
 }

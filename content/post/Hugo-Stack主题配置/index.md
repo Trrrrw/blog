@@ -240,7 +240,7 @@ provider = "waline"
 serverURL = "waline.trrw.tech"
 lang = "zh-CN"
 visitor = ""
-avatar = "img/Akkarin.jpg"
+avatar = "/img/Akkarin.jpg"
 emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
 requiredMeta = ["name", "email", "url"]
 placeholder = "欢迎留下宝贵的评论！请留下正确的邮箱以便有回复时进行邮箱提醒，请勿发布任何与本文章无关的内容。"
@@ -255,7 +255,7 @@ admin = "站长"
   - **serverURL**：评论服务器地址
   - **lang**：语言
   - **visitor**：访问者头像（这一项和下面一项暂时没确定有什么具体效果）
-  - **avatar**：评论者头像
+  - **avatar**：评论者头像，这个值会直接写在#waline > div的avatar属性中，应该是访客的默认头像
   - **emoji**：表情服务
   - **requiredMeta**：必填项
   - **placeholder**：评论框占位文本
@@ -335,9 +335,6 @@ Cactus:
       integrity:
       type: style
 ```
-下面的那些文件也是同理
-
-这感觉用处不大...主要是这个Waline太慢了(┬┬﹏┬┬)
 
 
 ## 附录
