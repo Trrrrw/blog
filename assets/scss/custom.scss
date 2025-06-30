@@ -46,8 +46,16 @@
 
 // Waline
 :root {
-    --waline-theme-color: #34495e !important;
-    --waline-active-color: #34495e7b !important;
+    --waline-theme-color: var(--accent-color) !important;
+    --waline-active-color: var(--accent-color-darker) !important;
+}
+
+.wl-panel {
+    border-radius: var(--card-border-radius) !important;
+}
+
+.wl-action:first-child {
+    display: none;
 }
 
 .wl-content a {
@@ -56,16 +64,12 @@
     transition: all .3s ease;
 
     &:hover {
+        color: var(--waline-theme-color) !important;
         box-shadow: 0 calc(-1rem * 2.2) rgba(var(--link-background-color), var(--link-background-opacity-hover)) inset;
-    }
-
-    @media (prefers-color-scheme:light) {
-        &:hover {
-            color: var(--waline-theme-color) !important;
-        }
     }
 }
 
 .wl-header-item input {
+    color: var(--card-text-color-secondary);
     font-size: .75em !important;
 }
