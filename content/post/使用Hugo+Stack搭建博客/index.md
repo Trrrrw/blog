@@ -136,6 +136,15 @@ readingTime = true # 显示/隐藏阅读时间
 打开 https://github.com/new ，在 **Repository name** 里填写你在 安装 Stack 主题 中使用的仓库名，然后点击 **Create repository** 。
 ![新建仓库](create-repo.webp)
 #### 将文件上传到 GitHub
+在此之前，先在项目根目录下新建一个 *.gitignore* 文件，并在文件中添加
+```
+public
+resources
+.vscode/
+.hugo_build.lock
+desktop.ini
+```
+
 打开终端，在`site-folder`路径下运行以下命令：
 ```powershell
 git add .
