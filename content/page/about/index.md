@@ -16,7 +16,8 @@ icon = "user"
 When good old friends are going away  
 Will you wish them to remember your name?
 {{< /quote >}}
-~o( =∩ω∩= )m
+
+<a href="https://afdian.com/a/trrrrw"><img width="200" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.png" alt=""></a>
 
 <style>
 .right-sidebar.sticky {
