@@ -1,10 +1,9 @@
 +++
-title = 'Stack 主题美化'
-date = '2025-06-30T00:59:59+08:00'
+title = 'Stack 主题下 Waline 美化'
+date = '2025-10-22T17:24:14+08:00'
 tags = ['Stack', 'Waline']
 categories = ['建站记录']
 image = 'cover.webp'
-draft = true
 +++
 
 ## 前言
