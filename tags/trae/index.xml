@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trae on Trrrrw's Blog</title><link>https://www.trrw.tech/tags/trae/</link><description>Recent content in Trae on Trrrrw's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 02 Jun 2025 23:03:45 +0800</lastBuildDate><atom:link href="https://www.trrw.tech/tags/trae/index.xml" rel="self" type="application/rss+xml"/><item><title>VSCode 配置 C、C++ 编程运行环境</title><link>https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link><pubDate>Mon, 02 Jun 2025 23:03:45 +0800</pubDate><guid>https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid><description>&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/cover.webp" alt="Featured image of post VSCode 配置 C、C++ 编程运行环境" /&gt;&lt;h2 id="前言"&gt;前言
+&lt;/h2&gt;&lt;p&gt;前段时间从VSCode换到了字节的Trae，发现超级好用。于是就把Clion和VSCode都卸载了，但是Trae没法安装VSCode的C/C++插件，所以就研究了一下怎么在Trae中使用MSVC+CMake+Clang-Format来写C/C++代码&lt;/p&gt;
+&lt;h2 id="msvc"&gt;MSVC
+&lt;/h2&gt;&lt;p&gt;前往 &lt;a class="link" href="https://visualstudio.microsoft.com/zh-hans/downloads/" target="_blank" rel="noopener"
+&gt;Visual Studio 下载页面&lt;/a&gt;，不要下载 VS2022，往下翻，在 &lt;strong&gt;用于Visual Studio的工具&lt;/strong&gt; 中有个 &lt;strong&gt;Visual Studio 2022 生成工具&lt;/strong&gt;，点击右侧的下载&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/download-vs.webp"
+width="2442"
+height="1234"
+loading="lazy"
+alt="下载Visual Studio 2022 生成工具"
+class="gallery-image"
+data-flex-grow="197"
+data-flex-basis="474px"
+&gt;&lt;/p&gt;
+&lt;p&gt;下载完成后安装，在开始菜单中找到 &lt;strong&gt;Visual Studio Installer&lt;/strong&gt;，点击打开
+可以先在 &lt;strong&gt;安装位置&lt;/strong&gt; 处修改 &lt;strong&gt;MSVC&lt;/strong&gt; 的安装位置&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vs-path.webp"
+width="1920"
+height="1080"
+loading="lazy"
+alt="修改MSVC安装位置"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;&lt;/p&gt;
+&lt;p&gt;接着在 &lt;strong&gt;单个组件&lt;/strong&gt; 中勾选 &lt;strong&gt;Windows 11 SDK&lt;/strong&gt; 和 &lt;strong&gt;MSVC v143 - VS 2022 C++ x64/x86 生成工具(最新)&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/win-11-sdk.webp"
+width="1920"
+height="1203"
+loading="lazy"
+alt="Windows 11 SDK"
+class="gallery-image"
+data-flex-grow="159"
+data-flex-basis="383px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/msvc.webp"
+width="1920"
+height="1203"
+loading="lazy"
+alt="MSVC v143 - VS 2022 C&amp;#43;&amp;#43; x64/x86 生成工具"
+class="gallery-image"
+data-flex-grow="159"
+data-flex-basis="383px"
+&gt;&lt;/p&gt;
+&lt;p&gt;最后点击右下角的安装&lt;/p&gt;
+&lt;h2 id="cmake"&gt;Cmake
+&lt;/h2&gt;&lt;p&gt;见 &lt;a class="link" href="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/#cmake" target="_blank" rel="noopener"
+&gt;Windows11上配置C、C++环境&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="clang-format"&gt;Clang-Format
+&lt;/h2&gt;&lt;p&gt;由于Trae使用的是open-vsx的镜像作为市场，其中没有 C/C++ 这个插件&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/extension-c.webp"
+width="2069"
+height="1279"
+loading="lazy"
+alt="C/C&amp;#43;&amp;#43; 插件"
+class="gallery-image"
+data-flex-grow="161"
+data-flex-basis="388px"
+&gt;&lt;/p&gt;
+&lt;p&gt;所以想要格式化代码，需要使用 &lt;strong&gt;Clang-Format&lt;/strong&gt; 这个插件&lt;br&gt;
+在下载插件前，需要先 &lt;a class="link" href="https://llvm.org/builds/" target="_blank" rel="noopener"
+&gt;下载 &lt;strong&gt;Clang-Format&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/download-clang-format.webp"
+width="3311"
+height="1977"
+loading="lazy"
+alt="Clang-Format下载"
+class="gallery-image"
+data-flex-grow="167"
+data-flex-basis="401px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;藏的真深🫠&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;最后安装 &lt;strong&gt;Clang-Format&lt;/strong&gt; 插件&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/extension-clang-format.webp"
+width="764"
+height="225"
+loading="lazy"
+alt="Clang-Format插件"
+class="gallery-image"
+data-flex-grow="339"
+data-flex-basis="814px"
+&gt;&lt;/p&gt;
+&lt;h2 id="新建项目"&gt;新建项目
+&lt;/h2&gt;&lt;p&gt;新建一个文件夹，在其中创建 &lt;strong&gt;CMakeLists.txt&lt;/strong&gt; 和 &lt;strong&gt;main.cpp&lt;/strong&gt; 文件&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cmake" data-lang="cmake"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# CMakeLists.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;cmake_minimum_required&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;VERSION&lt;/span&gt; &lt;span class="s"&gt;4.0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# 该项目所需的CMake最低版本
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;project&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;test&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# 项目名称
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;CMAKE_CXX_STANDARD&lt;/span&gt; &lt;span class="s"&gt;26&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# 使用的C++标准
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;add_executable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;test&lt;/span&gt; &lt;span class="s"&gt;main.cpp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# 生成可执行文件: &amp;#34;test.exe&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// main.cpp
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;用 &lt;strong&gt;vscode&lt;/strong&gt; 或者 &lt;strong&gt;Trae&lt;/strong&gt; 打开这个文件夹，此时 &lt;strong&gt;CMake 插件&lt;/strong&gt; 应该会自动弹出 &lt;strong&gt;选择工具包的对话框&lt;/strong&gt;，选择第一个64位的即可&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/select-toolkit.webp"
+width="951"
+height="412"
+loading="lazy"
+alt="选择工具包"
+class="gallery-image"
+data-flex-grow="230"
+data-flex-basis="553px"
+&gt;&lt;/p&gt;
+&lt;p&gt;之后下面会的输出栏中会输出 &lt;strong&gt;CMake&lt;/strong&gt; 的输出，如果中文部分出现乱码，需要在设置中搜索 &lt;strong&gt;output&lt;/strong&gt;，然后找到 &lt;strong&gt;Cmake: Output Log Encoding&lt;/strong&gt;，将其修改为 &lt;strong&gt;utf-8&lt;/strong&gt;&lt;br&gt;
+之后每次修改 &lt;strong&gt;CMakeLists.txt&lt;/strong&gt; 后，&lt;strong&gt;CMake 插件&lt;/strong&gt; 都会自动重新生成项目，输出栏中也会输出 &lt;strong&gt;CMake&lt;/strong&gt; 的输出&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/cmake-output-setting.webp"
+width="1839"
+height="872"
+loading="lazy"
+alt="Cmake: Output Log Encoding"
+class="gallery-image"
+data-flex-grow="210"
+data-flex-basis="506px"
+&gt;&lt;/p&gt;
+&lt;h2 id="运行项目"&gt;运行项目
+&lt;/h2&gt;&lt;p&gt;打开 &lt;strong&gt;main.cpp&lt;/strong&gt;，点击 &lt;strong&gt;左下角&lt;/strong&gt; 的 &lt;strong&gt;在终端窗口中启动所选目标&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/run-command.webp"
+width="1186"
+height="583"
+loading="lazy"
+alt="在终端窗口中启动所选目标"
+class="gallery-image"
+data-flex-grow="203"
+data-flex-basis="488px"
+&gt;&lt;/p&gt;
+&lt;h2 id="后记"&gt;后记
+&lt;/h2&gt;&lt;p&gt;这个文章只是记录一下环境配置的过程，平常不怎么写 &lt;strong&gt;C/C++&lt;/strong&gt; 代码，之前也写过一个配置 &lt;strong&gt;gcc&lt;/strong&gt; 的文章，但是那个 &lt;strong&gt;gcc&lt;/strong&gt; 版本太低了。&lt;/p&gt;
+&lt;h2 id="附录"&gt;附录
+&lt;/h2&gt;&lt;h3 id="参考文献"&gt;参考文献
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class="link" href="https://blog.csdn.net/braised_fish/article/details/116236406" target="_blank" rel="noopener"
+&gt;vscode 内置cmake output窗口乱码&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="文章封面"&gt;文章封面
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://www.pixiv.net/artworks/126908719" target="_blank" rel="noopener"
+&gt;セルマ&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

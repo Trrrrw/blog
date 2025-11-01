@@ -1,0 +1,401 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="前言 在上一篇文章中我们成功搭建了一个使用Stack主题的博客，并将其部署在了Vercel上。但此时网站中只有刚刚新建的文章，非常简陋，甚至头像也没有。\n而Stack主题官网的文档不仅是英文的，而且给出的内容非常有限。\n所以这里单独开一篇来说一下Stack主题的配置。\n对于 static 和 assets 这两个文件夹，Hugo 在构建时会直接将 static 文件夹下的文件复制到网站的根目录下，而 assets 文件夹下的文件会被编译后得到一个链接。 例如，我的网站图标是 static/favicon.webp，在最终上线后，可以直接访问 https://www.trrw.tech/favicon.webp 来打开这个图片。 而我首页的头像图片则是 assets/img/avatar.jpg，他的链接是 https://www.trrw.tech/img/avatar_hu_b50a61df1acbb930.jpg 但是在配置中，这两个文件夹下的文件使用方式是一样的，上个两个文件的使用方式分别是：favicon.webp 和 img/avatar.jpg。 网站基础信息 网站标题 打开 config/_default/config.toml (在新版中这个 config.toml 也可以重命名成 hugo.toml )\n1 2 3 4 5 # config/_default/config.toml baseURL = 'https://www.trrw.tech/' languageCode = 'zh-cn' title = &#34;Trrrrw's Blog&#34; baseURL：就填你现在打开网站后在主页时的网址就行，如果是自定义域名就填你的域名。 languageCode：语言代码，这里填中文。(具体的语言代码可以看这里) title：网站标题，显示在左侧栏头像下方以及浏览器标签栏中。 网站图标 将你要作为网站图标的图片重命名成 favicon.png，然后将其放在 static 文件夹中，覆盖掉原先的图片。 配置文件在 config/_default/params.toml 中的 favicon 项。\n1 2 3 # config/_default/params.toml favicon = &#34;favicon.png&#34; 左侧边栏 头像 以 assets/img/avatar.jpg 为例，其配置在 config/_default/params.toml 中：\n"><title>Hugo Stack主题配置</title><link rel=canonical href=https://www.trrw.tech/p/hugo-stack%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/><link rel=stylesheet href=/scss/style.min.4c8fe460fef7e6ee9a9e41206f27c87ffd3586c726957903f02279f9ae3a6d12.css><meta property='og:title' content="Hugo Stack主题配置"><meta property='og:description' content="前言 在上一篇文章中我们成功搭建了一个使用Stack主题的博客，并将其部署在了Vercel上。但此时网站中只有刚刚新建的文章，非常简陋，甚至头像也没有。\n而Stack主题官网的文档不仅是英文的，而且给出的内容非常有限。\n所以这里单独开一篇来说一下Stack主题的配置。\n对于 static 和 assets 这两个文件夹，Hugo 在构建时会直接将 static 文件夹下的文件复制到网站的根目录下，而 assets 文件夹下的文件会被编译后得到一个链接。 例如，我的网站图标是 static/favicon.webp，在最终上线后，可以直接访问 https://www.trrw.tech/favicon.webp 来打开这个图片。 而我首页的头像图片则是 assets/img/avatar.jpg，他的链接是 https://www.trrw.tech/img/avatar_hu_b50a61df1acbb930.jpg 但是在配置中，这两个文件夹下的文件使用方式是一样的，上个两个文件的使用方式分别是：favicon.webp 和 img/avatar.jpg。 网站基础信息 网站标题 打开 config/_default/config.toml (在新版中这个 config.toml 也可以重命名成 hugo.toml )\n1 2 3 4 5 # config/_default/config.toml baseURL = 'https://www.trrw.tech/' languageCode = 'zh-cn' title = &#34;Trrrrw's Blog&#34; baseURL：就填你现在打开网站后在主页时的网址就行，如果是自定义域名就填你的域名。 languageCode：语言代码，这里填中文。(具体的语言代码可以看这里) title：网站标题，显示在左侧栏头像下方以及浏览器标签栏中。 网站图标 将你要作为网站图标的图片重命名成 favicon.png，然后将其放在 static 文件夹中，覆盖掉原先的图片。 配置文件在 config/_default/params.toml 中的 favicon 项。\n1 2 3 # config/_default/params.toml favicon = &#34;favicon.png&#34; 左侧边栏 头像 以 assets/img/avatar.jpg 为例，其配置在 config/_default/params.toml 中：\n"><meta property='og:url' content='https://www.trrw.tech/p/hugo-stack%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/'><meta property='og:site_name' content="Trrrrw's Blog"><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='Hugo'><meta property='article:tag' content='Stack'><meta property='article:tag' content='GitHub'><meta property='article:tag' content='Waline'><meta property='article:published_time' content='2025-05-15T14:41:00+08:00'><meta property='article:modified_time' content='2025-05-15T14:41:00+08:00'><meta property='og:image' content='https://www.trrw.tech/p/hugo-stack%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/cover.webp'><meta name=twitter:title content="Hugo Stack主题配置"><meta name=twitter:description content="前言 在上一篇文章中我们成功搭建了一个使用Stack主题的博客，并将其部署在了Vercel上。但此时网站中只有刚刚新建的文章，非常简陋，甚至头像也没有。\n而Stack主题官网的文档不仅是英文的，而且给出的内容非常有限。\n所以这里单独开一篇来说一下Stack主题的配置。\n对于 static 和 assets 这两个文件夹，Hugo 在构建时会直接将 static 文件夹下的文件复制到网站的根目录下，而 assets 文件夹下的文件会被编译后得到一个链接。 例如，我的网站图标是 static/favicon.webp，在最终上线后，可以直接访问 https://www.trrw.tech/favicon.webp 来打开这个图片。 而我首页的头像图片则是 assets/img/avatar.jpg，他的链接是 https://www.trrw.tech/img/avatar_hu_b50a61df1acbb930.jpg 但是在配置中，这两个文件夹下的文件使用方式是一样的，上个两个文件的使用方式分别是：favicon.webp 和 img/avatar.jpg。 网站基础信息 网站标题 打开 config/_default/config.toml (在新版中这个 config.toml 也可以重命名成 hugo.toml )\n1 2 3 4 5 # config/_default/config.toml baseURL = 'https://www.trrw.tech/' languageCode = 'zh-cn' title = &#34;Trrrrw's Blog&#34; baseURL：就填你现在打开网站后在主页时的网址就行，如果是自定义域名就填你的域名。 languageCode：语言代码，这里填中文。(具体的语言代码可以看这里) title：网站标题，显示在左侧栏头像下方以及浏览器标签栏中。 网站图标 将你要作为网站图标的图片重命名成 favicon.png，然后将其放在 static 文件夹中，覆盖掉原先的图片。 配置文件在 config/_default/params.toml 中的 favicon 项。\n1 2 3 # config/_default/params.toml favicon = &#34;favicon.png&#34; 左侧边栏 头像 以 assets/img/avatar.jpg 为例，其配置在 config/_default/params.toml 中：\n"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://www.trrw.tech/p/hugo-stack%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/cover.webp'><link rel="shortcut icon" href=/favicon.webp><script defer src=https://umami.trrw.tech/script.js data-website-id=0d3ae99b-13c2-453f-8487-2f4e553b79c3></script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu_b50a61df1acbb930.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>Trrrrw's Blog</a></h1><h2 class=site-description>Spending a lifetime to taste the love and pain</h2></div></header><ol class=menu-social><li><a href=https://github.com/Trrrrw target=_blank title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://space.bilibili.com/93625252 target=_blank title=BiliBili rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 014-4h10a4 4 0 014 4v6a4 4 0 01-4 4H7a4 4 0 01-4-4v-6z"/><path d="M8 3l2 3"/><path d="M16 3l-2 3"/><path d="M9 13v-2"/><path d="M15 11v2"/></svg></a></li><li><a href=https://x.com/trrrrrrrw target=_blank title=Twitter rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16H20L8.267 4z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg></a></li><li><a href=mailto:wzhhenry@qq.com target=_blank title=Email rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M3 7l9 6 9-6"/></svg></a></li><li><a href=/index.xml target=_blank title=Rss rel=me><svg class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>主页</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>归档</span></a></li><li><a href=/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>链接</span></a></li><li><a href=/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>关于</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜索</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#前言>前言</a></li><li><a href=#网站基础信息>网站基础信息</a><ol><li><a href=#网站标题>网站标题</a></li><li><a href=#网站图标>网站图标</a></li></ol></li><li><a href=#左侧边栏>左侧边栏</a><ol><li><a href=#头像>头像</a></li><li><a href=#副标题>副标题</a></li><li><a href=#社交图标>社交图标</a></li><li><a href=#导航菜单>导航菜单</a></li></ol></li><li><a href=#页面-page>页面 Page</a><ol><li><a href=#首页归档>首页、归档</a></li><li><a href=#链接>链接</a></li><li><a href=#关于搜索>关于、搜索</a></li></ol></li><li><a href=#页脚>页脚</a><ol><li><a href=#版权声明>版权声明</a></li><li><a href=#自定义文本>自定义文本</a></li></ol></li><li><a href=#分类>分类</a></li><li><a href=#标签>标签</a></li><li><a href=#评论>评论</a></li><li><a href=#网站加速>网站加速</a><ol><li><a href=#custom-font>custom-font</a></li><li><a href=#vibrantminjs>vibrant.min.js</a></li></ol></li><li><a href=#附录>附录</a><ol><li><a href=#参考文献>参考文献</a></li><li><a href=#文章封面>文章封面</a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/hugo-stack%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/><img src=/p/hugo-stack%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/cover.webp width=2198 height=1440 loading=lazy alt="Featured image of post Hugo Stack主题配置"></a></div><div class=article-details><header class=article-category><a href=/categories/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/>建站记录</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/hugo-stack%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/>Hugo Stack主题配置</a></h2></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>May 15, 2025</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 4 分钟</time></div></footer></div></header><section class=article-content><h2 id=前言>前言</h2><p>在上一篇文章中我们成功搭建了一个使用Stack主题的博客，并将其部署在了Vercel上。但此时网站中只有刚刚新建的文章，非常简陋，甚至头像也没有。<br>而Stack主题官网的文档不仅是英文的，而且给出的内容非常有限。<br>所以这里单独开一篇来说一下Stack主题的配置。</p><blockquote><ul><li>对于 <strong>static</strong> 和 <strong>assets</strong> 这两个文件夹，Hugo 在构建时会直接将 <strong>static</strong> 文件夹下的文件复制到网站的根目录下，而 <strong>assets</strong> 文件夹下的文件会被编译后得到一个链接。</li><li>例如，我的网站图标是 <strong>static/favicon.webp</strong>，在最终上线后，可以直接访问 <a class=link href=https://www.trrw.tech/favicon.webp target=_blank rel=noopener>https://www.trrw.tech/favicon.webp</a> 来打开这个图片。
+而我首页的头像图片则是 <strong>assets/img/avatar.jpg</strong>，他的链接是 <a class=link href=https://www.trrw.tech/img/avatar_hu_b50a61df1acbb930.jpg target=_blank rel=noopener>https://www.trrw.tech/img/avatar_hu_b50a61df1acbb930.jpg</a></li><li>但是在配置中，这两个文件夹下的文件使用方式是一样的，上个两个文件的使用方式分别是：<code>favicon.webp</code> 和 <code>img/avatar.jpg</code>。</li></ul></blockquote><h2 id=网站基础信息>网站基础信息</h2><h3 id=网站标题>网站标题</h3><p>打开 <strong>config/_default/config.toml</strong> (在新版中这个 <strong>config.toml</strong> 也可以重命名成 <strong>hugo.toml</strong> )</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># config/_default/config.toml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>baseURL</span> <span class=p>=</span> <span class=s1>&#39;https://www.trrw.tech/&#39;</span>
+</span></span><span class=line><span class=cl><span class=nx>languageCode</span> <span class=p>=</span> <span class=s1>&#39;zh-cn&#39;</span>
+</span></span><span class=line><span class=cl><span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;Trrrrw&#39;s Blog&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><strong>baseURL</strong>：就填你现在打开网站后在主页时的网址就行，如果是自定义域名就填你的域名。</li><li><strong>languageCode</strong>：语言代码，这里填中文。(具体的语言代码可以看<a class=link href=https://stack.jimmycai.com/config/i18n target=_blank rel=noopener>这里</a>)</li><li><strong>title</strong>：网站标题，显示在左侧栏头像下方以及浏览器标签栏中。</li></ul><h3 id=网站图标>网站图标</h3><p>将你要作为网站图标的图片重命名成 <strong>favicon.png</strong>，然后将其放在 <strong>static</strong> 文件夹中，覆盖掉原先的图片。
+配置文件在 <strong>config/_default/params.toml</strong> 中的 <strong>favicon</strong> 项。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># config/_default/params.toml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>favicon</span> <span class=p>=</span> <span class=s2>&#34;favicon.png&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=左侧边栏>左侧边栏</h2><h3 id=头像>头像</h3><p>以 <strong>assets/img/avatar.jpg</strong> 为例，其配置在 <strong>config/_default/params.toml</strong> 中：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># config/_default/params.toml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>sidebar</span><span class=p>.</span><span class=nx>avatar</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nx>enabled</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl><span class=nx>local</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl><span class=nx>src</span> <span class=p>=</span> <span class=s2>&#34;img/avatar.jpg&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><strong>enabled</strong>：是否启用头像</li><li><strong>local</strong>：是否使用本地图片，为 <strong>false</strong> 时需 <strong>src</strong> 需要填写图片链接而非本地图片路径</li><li><strong>src</strong>：图片链接</li></ul><h3 id=副标题>副标题</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># config/_default/params.toml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>sidebar</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nx>emoji</span> <span class=p>=</span> <span class=s2>&#34;❤️&#34;</span>
+</span></span><span class=line><span class=cl><span class=nx>subtitle</span> <span class=p>=</span> <span class=s2>&#34;Spending a lifetime to taste the love and pain.&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><strong>emoji</strong>：左侧栏头像右下角可以显示一个 <strong>emoji</strong></li><li><strong>subtitle</strong>：副标题</li></ul><h3 id=社交图标>社交图标</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># config/_default/menu.toml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[[</span><span class=nx>social</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl><span class=nx>identifier</span> <span class=p>=</span> <span class=s2>&#34;github&#34;</span>
+</span></span><span class=line><span class=cl><span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;GitHub&#34;</span>
+</span></span><span class=line><span class=cl><span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;https://github.com/Trrrrw&#34;</span>
+</span></span><span class=line><span class=cl><span class=nx>weight</span> <span class=p>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>social</span><span class=p>.</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nx>icon</span> <span class=p>=</span> <span class=s2>&#34;brand-github&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><strong>identifier</strong>：应该是给Hugo区分不同图标用的，不同图标的 <strong>identifier</strong> 不能相同</li><li><strong>name</strong>：鼠标悬停在图标上时显示的文字</li><li><strong>url</strong>：跳转链接</li><li><strong>weight</strong>：显示顺序，数字越小越靠前</li><li><strong>icon</strong>：图标名称，可以在这个网站上查找 <a class=link href=https://tabler.io/icons target=_blank rel=noopener>https://tabler.io/icons</a></li></ul><p>如果网站上没有你想要的图标，可以将svg文件放在 <strong>assets/icons</strong> 文件夹中，之后在 <strong>icon</strong> 中填写文件名即可：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># config/_default/menu.toml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>social</span><span class=p>.</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nx>icon</span> <span class=p>=</span> <span class=s2>&#34;brand-x&#34;</span>    <span class=c># 对应 assets/icons/brand-x.svg</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=导航菜单>导航菜单</h3><p>设置导航菜单只需要在你想要显示在左侧栏的页面(page)的 <strong>Front Matter</strong> 中添加 <strong>menu</strong> 项即可：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>&lt;!-- content/page/archives/index.md --&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>+++
+</span></span><span class=line><span class=cl><span class=gh># ... existing code ...
+</span></span></span><span class=line><span class=cl><span class=gh></span>
+</span></span><span class=line><span class=cl>[menu.main]
+</span></span><span class=line><span class=cl>weight = 2
+</span></span><span class=line><span class=cl>[menu.main.params]
+</span></span><span class=line><span class=cl>icon = &#34;archives&#34;
+</span></span><span class=line><span class=cl>+++
+</span></span></code></pre></td></tr></table></div></div><ul><li><strong>weight</strong>：显示顺序，数字越小越靠前</li></ul><p>而首页则是 <strong>content/_index.md</strong>：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>&lt;!-- content/_index.md --&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>+++
+</span></span><span class=line><span class=cl>[menu.main]
+</span></span><span class=line><span class=cl>name = &#34;主页&#34;
+</span></span><span class=line><span class=cl>weight = -1 # 将首页置顶
+</span></span><span class=line><span class=cl>[menu.main.params]
+</span></span><span class=line><span class=cl>icon = &#34;home&#34;
+</span></span><span class=line><span class=cl>+++
+</span></span></code></pre></td></tr></table></div></div><h2 id=页面-page>页面 Page</h2><p>一般一个 blog 的 page 会有 <strong>首页 home</strong>、<strong>归档 archives</strong>、<strong>链接 links</strong>、<strong>关于 about</strong>、<strong>搜索 search</strong></p><h3 id=首页归档>首页、归档</h3><ul><li>首页一般只需要配置上一节中提到的 <strong>menu</strong> 项即可</li><li>归档页面创建这个文件即可：<strong>content/page/archives/index.md</strong></li></ul><h3 id=链接>链接</h3><p>这一部分可以参考 <em>「<a class=link href=https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/>Stack主题友链页面美化</a>」</em><br>下面是<strong>Stack</strong>默认的<strong>links</strong>页面实现方式</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>&lt;!-- content/page/links/index.md --&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>+++
+</span></span><span class=line><span class=cl><span class=gh># 基本信息
+</span></span></span><span class=line><span class=cl><span class=gh></span>title = &#34;链接&#34;
+</span></span><span class=line><span class=cl>layout = &#39;links&#39;
+</span></span><span class=line><span class=cl>slug = &#39;links&#39;
+</span></span><span class=line><span class=cl>toc = false
+</span></span><span class=line><span class=cl>readingTime = false
+</span></span><span class=line><span class=cl>license = false
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=gh># 友链
+</span></span></span><span class=line><span class=cl><span class=gh></span>[[links]]
+</span></span><span class=line><span class=cl>title = &#34;友链1名称&#34;
+</span></span><span class=line><span class=cl>description = &#34;简介&#34;
+</span></span><span class=line><span class=cl>website = &#34;https://www.trrw.tech/&#34;
+</span></span><span class=line><span class=cl>image = &#34;https://www.trrw.tech/favicon.webp&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>[[links]]
+</span></span><span class=line><span class=cl>title = &#34;友链2名称&#34;
+</span></span><span class=line><span class=cl>description = &#34;简介&#34;
+</span></span><span class=line><span class=cl>website = &#34;https://www.trrw.tech/&#34;
+</span></span><span class=line><span class=cl>image = &#34;https://www.trrw.tech/favicon.webp&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=gh># 菜单栏设置
+</span></span></span><span class=line><span class=cl><span class=gh></span>[menu.main]
+</span></span><span class=line><span class=cl>weight = 3
+</span></span><span class=line><span class=cl>[menu.main.params]
+</span></span><span class=line><span class=cl>icon = &#34;link&#34;
+</span></span><span class=line><span class=cl>+++
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>&lt;!-- 下面是正常的 Markdown 这部分会显示在友链页面的顶部 --&gt;
+</span></span><span class=line><span class=cl>在此页面留言，或者给我发邮件。
+</span></span><span class=line><span class=cl><span class=k>
+</span></span></span><span class=line><span class=cl><span class=k>&gt; </span><span class=ge>名称：Trrrrw&#39;s Blog
+</span></span></span><span class=line><span class=cl><span class=ge></span>&gt; 
+</span></span><span class=line><span class=cl><span class=k>&gt; </span><span class=ge>简介：Spending a lifetime to taste the love and pain.
+</span></span></span><span class=line><span class=cl><span class=ge></span>&gt; 
+</span></span><span class=line><span class=cl><span class=k>&gt; </span><span class=ge>地址：https://www.trrw.tech/
+</span></span></span><span class=line><span class=cl><span class=ge></span>&gt; 
+</span></span><span class=line><span class=cl><span class=k>&gt; </span><span class=ge>头像：https://www.trrw.tech/favicon.webp
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=关于搜索>关于、搜索</h3><ul><li><strong>关于</strong>页面：<strong>content/page/about/index.md</strong>，就和文章一样写就行</li><li><strong>搜索</strong>页面：<strong>content/page/search/index.md</strong>，一般不需要特殊配置</li></ul><h2 id=页脚>页脚</h2><h3 id=版权声明>版权声明</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># config/_default/params.toml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>footer</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nx>since</span> <span class=p>=</span> <span class=mi>2022</span>    <span class=c># 起始年份</span>
+</span></span></code></pre></td></tr></table></div></div><p>此时页脚会自动生成 <strong>© 起始年份 - 当前年份 网站标题</strong></p><h3 id=自定义文本>自定义文本</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># config/_default/params.toml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>footer</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nx>since</span> <span class=p>=</span> <span class=mi>2022</span>    <span class=c># 起始年份</span>
+</span></span><span class=line><span class=cl><span class=nx>customText</span> <span class=p>=</span> <span class=s1>&#39;自定义内容&#39;</span>
+</span></span></code></pre></td></tr></table></div></div><p>可用于添加<strong>ICP备案号</strong>或自定义内容</p><h2 id=分类>分类</h2><p>分类文件夹是 <strong>content/categories</strong><br>在这个文件夹下创建以分类名称命名的文件夹，然后在这个文件夹下创建一个 <strong>_index.md</strong> 文件，内容如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>+++
+</span></span><span class=line><span class=cl>title = &#34;教程&#34;
+</span></span><span class=line><span class=cl>image = &#34;cover.webp&#34;
+</span></span><span class=line><span class=cl>+++
+</span></span></code></pre></td></tr></table></div></div><ul><li><strong>title</strong>：分类名称</li><li><strong>image</strong>：分类页封面，非必须</li></ul><h2 id=标签>标签</h2><p>标签直接在每个文章的 <strong>Front Matter</strong> 中添加 <strong>tags</strong> 项即可：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>+++
+</span></span><span class=line><span class=cl><span class=gh># ... existing code...
+</span></span></span><span class=line><span class=cl><span class=gh></span>
+</span></span><span class=line><span class=cl>tags = [&#34;Hugo&#34;,&#34;Stack&#34;,&#34;GitHub&#34;,&#34;Vercel&#34;]
+</span></span><span class=line><span class=cl>+++
+</span></span></code></pre></td></tr></table></div></div><h2 id=评论>评论</h2><p>在 <strong>config/_default/params.toml</strong> 的 <strong>comments</strong> 参数中配置(这里以 <a class=link href=https://waline.js.org/ target=_blank rel=noopener>waline</a> 为例)：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># config/_default/params.toml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>comments</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nx>enabled</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl><span class=nx>provider</span> <span class=p>=</span> <span class=s2>&#34;waline&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># ... existing code...</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>comments</span><span class=p>.</span><span class=nx>waline</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nx>serverURL</span> <span class=p>=</span> <span class=s2>&#34;waline.trrw.tech&#34;</span>
+</span></span><span class=line><span class=cl><span class=nx>lang</span> <span class=p>=</span> <span class=s2>&#34;zh-CN&#34;</span>
+</span></span><span class=line><span class=cl><span class=nx>visitor</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl><span class=nx>avatar</span> <span class=p>=</span> <span class=s2>&#34;/img/Akkarin.jpg&#34;</span>
+</span></span><span class=line><span class=cl><span class=nx>emoji</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nx>requiredMeta</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;name&#34;</span><span class=p>,</span> <span class=s2>&#34;email&#34;</span><span class=p>,</span> <span class=s2>&#34;url&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nx>placeholder</span> <span class=p>=</span> <span class=s2>&#34;欢迎留下宝贵的评论！请留下正确的邮箱以便有回复时进行邮箱提醒，请勿发布任何与本文章无关的内容。&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>comments</span><span class=p>.</span><span class=nx>waline</span><span class=p>.</span><span class=nx>locale</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nx>admin</span> <span class=p>=</span> <span class=s2>&#34;站长&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><strong>comments</strong><ul><li><strong>enabled</strong>：是否启用评论</li><li><strong>provider</strong>：评论提供商</li></ul></li><li><strong>comments.waline</strong><ul><li><strong>serverURL</strong>：评论服务器地址</li><li><strong>lang</strong>：语言</li><li><strong>visitor</strong>：访问者头像（这一项和下面一项暂时没确定有什么具体效果）</li><li><strong>avatar</strong>：评论者头像，这个值会直接写在#waline > div的avatar属性中，应该是访客的默认头像</li><li><strong>emoji</strong>：表情服务</li><li><strong>requiredMeta</strong>：必填项</li><li><strong>placeholder</strong>：评论框占位文本</li></ul></li><li><strong>comments.waline.locale</strong><ul><li><strong>admin</strong>：管理员在自己网站评论时在昵称旁显示的文本</li></ul></li></ul><blockquote><p>具体 Waline 的配置可以看 <a class=link href=https://waline.js.org/guide/get-started/ target=_blank rel=noopener>Waline 文档</a></p></blockquote><h2 id=网站加速>网站加速</h2><p>如果你是将网站部署到自己服务器上，Hugo有一些资源可能会加载的比较慢，可以把这部分文件下载到本地</p><h3 id=custom-font>custom-font</h3><p>先从<a class=link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap" target=_blank rel=noopener>custom-font.css</a>下载下来CSS文件，放到<code>assets\css\custom-font.css</code><br>打开这个CSS，里面会有6个woff2文件链接，把这六个链接下载下来放到<code>static\fonts</code>文件夹中<br>然后修改CSS文件中的链接，将<code>https://fonts.gstatic.com/s/lato/v24</code>替换为<code>/fonts</code></p><p>然后创建并修改<code>layouts\partials\footer\components\custom-font.html</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>{{ $customFont := resources.Get &#34;css/custom-font.css&#34; | minify | fingerprint }}
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kr>const</span> <span class=nx>customFont</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;link&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>customFont</span><span class=p>.</span><span class=nx>href</span> <span class=o>=</span> <span class=s2>&#34;{{ $customFont.RelPermalink }}&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=nx>customFont</span><span class=p>.</span><span class=nx>type</span> <span class=o>=</span> <span class=s2>&#34;text/css&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=nx>customFont</span><span class=p>.</span><span class=nx>rel</span> <span class=o>=</span> <span class=s2>&#34;stylesheet&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=nb>document</span><span class=p>.</span><span class=nx>head</span><span class=p>.</span><span class=nx>appendChild</span><span class=p>(</span><span class=nx>customFont</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}());</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=vibrantminjs>vibrant.min.js</h3><p>从<a class=link href=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js target=_blank rel=noopener>vibrant.min.js</a>下载<code>vibrant.min.js</code>文件，放到<code>static\js\vibrant.min.js</code><br>创建并修改<code>data\external.yaml</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>Vibrant</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>src</span><span class=p>:</span><span class=w> </span><span class=l>/js/vibrant.min.js</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>integrity</span><span class=p>:</span><span class=w> </span><span class=l>sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>script</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>PhotoSwipe</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>src</span><span class=p>:</span><span class=w> </span><span class=l>https://unpkg.com/photoswipe@4.1.3/dist/photoswipe.min.js</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>integrity</span><span class=p>:</span><span class=w> </span><span class=l>sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>script</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>defer</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>src</span><span class=p>:</span><span class=w> </span><span class=l>https://unpkg.com/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>integrity</span><span class=p>:</span><span class=w> </span><span class=l>sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>script</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>defer</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>src</span><span class=p>:</span><span class=w> </span><span class=l>https://unpkg.com/photoswipe@4.1.3/dist/default-skin/default-skin.css</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>style</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>src</span><span class=p>:</span><span class=w> </span><span class=l>https://unpkg.com/photoswipe@4.1.3/dist/photoswipe.css</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>style</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>KaTeX</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>src</span><span class=p>:</span><span class=w> </span><span class=l>https://unpkg.com/katex@0.16.9/dist/katex.min.css</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>integrity</span><span class=p>:</span><span class=w> </span><span class=l>sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>style</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>src</span><span class=p>:</span><span class=w> </span><span class=l>https://unpkg.com/katex@0.16.9/dist/katex.min.js</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>integrity</span><span class=p>:</span><span class=w> </span><span class=l>sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>script</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>defer</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>src</span><span class=p>:</span><span class=w> </span><span class=l>https://unpkg.com/katex@0.16.9/dist/contrib/auto-render.min.js</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>integrity</span><span class=p>:</span><span class=w> </span><span class=l>sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>script</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>defer</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>Cactus</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>src</span><span class=p>:</span><span class=w> </span><span class=l>https://latest.cactus.chat/cactus.js</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>integrity</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>script</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>src</span><span class=p>:</span><span class=w> </span><span class=l>https://latest.cactus.chat/style.css</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>integrity</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>style</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=附录>附录</h2><h3 id=参考文献>参考文献</h3><ol><li><a class=link href=https://hugo.opendocs.io/ target=_blank rel=noopener>HUGO中文文档</a></li><li><a class=link href=https://stack.jimmycai.com/ target=_blank rel=noopener>Stack主题文档</a></li><li><a class=link href=https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/ target=_blank rel=noopener>失迹の博客 | 使用 Hugo + Stack 简单搭建一个博客</a></li></ol><h3 id=文章封面>文章封面</h3><p><a class=link href=https://www.pixiv.net/artworks/126090215 target=_blank rel=noopener>天才たちのてぇてぇ</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/hugo/>Hugo</a>
+<a href=/tags/stack/>Stack</a>
+<a href=/tags/github/>GitHub</a>
+<a href=/tags/waline/>Waline</a></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/p/%E4%BD%BF%E7%94%A8hugo-stack%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/><div class=article-image><img src=/p/%E4%BD%BF%E7%94%A8hugo-stack%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/cover.7da1f4decee2e69f4427d1b76a5dae8b.webp width=1824 height=1248 loading=lazy alt="Featured image of post 使用Hugo+Stack搭建博客" data-hash="md5-faH03s7i5p9EJ9G3al2uiw=="></div><div class=article-details><h2 class=article-title>使用Hugo+Stack搭建博客</h2></div></a></article><article class=has-image><a href=/p/stack-%E4%B8%BB%E9%A2%98%E4%B8%8B-waline-%E7%BE%8E%E5%8C%96/><div class=article-image><img src=/p/stack-%E4%B8%BB%E9%A2%98%E4%B8%8B-waline-%E7%BE%8E%E5%8C%96/cover.0aec1e505020f76a99f97c94cae8e1b0.webp width=1891 height=1440 loading=lazy alt="Featured image of post Stack 主题下 Waline 美化" data-hash="md5-CuweUFAg92qZ+XyUyujhsA=="></div><div class=article-details><h2 class=article-title>Stack 主题下 Waline 美化</h2></div></a></article><article class=has-image><a href=/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/><div class=article-image><img src=/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/cover.790f5d6c84933d2205ffd84482c78e03.webp width=1472 height=832 loading=lazy alt="Featured image of post Stack主题友链页面美化" data-hash="md5-eQ9dbISTPSIF/9hEgseOAw=="></div><div class=article-details><h2 class=article-title>Stack主题友链页面美化</h2></div></a></article><article class=has-image><a href=/p/waline%E8%AF%84%E8%AE%BA%E9%85%8D%E7%BD%AEserver%E9%85%B1%E9%80%9A%E7%9F%A5/><div class=article-image><img src=/p/waline%E8%AF%84%E8%AE%BA%E9%85%8D%E7%BD%AEserver%E9%85%B1%E9%80%9A%E7%9F%A5/cover.b81497468549eca216ad3e66de16de57.webp width=2612 height=1440 loading=lazy alt="Featured image of post Waline评论配置Server酱通知" data-hash="md5-uBSXRoVJ7KIWrT5m3hbeVw=="></div><div class=article-details><h2 class=article-title>Waline评论配置Server酱通知</h2></div></a></article><article class=has-image><a href=/p/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BAblog%E7%BD%91%E7%AB%99/><div class=article-image><img src=/p/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BAblog%E7%BD%91%E7%AB%99/Hexo-cover.a5e94297d833a2579db8faed6d3611db.webp width=1920 height=1080 loading=lazy alt="Featured image of post 基于Hexo搭建blog网站" data-hash="md5-pelCl9gzoleduPrtbTYR2w=="></div><div class=article-details><h2 class=article-title>基于Hexo搭建blog网站</h2></div></a></article></div></div></aside><link rel=stylesheet href=/vendor/waline/waline.css><div id=waline class=waline-container></div><style>.waline-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding);--waline-font-size:var(--article-font-size)}.waline-container .wl-count{color:var(--card-text-color-main)}</style><script type=module>
+    import { init } from '/vendor/waline/waline.js';
+    init({"avatar":"img/Akkarin.jpg","dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://npm.elemecdn.com/@waline/emojis@1.2.0/bilibili","https://npm.elemecdn.com/@waline/emojis@1.2.0/weibo"],"lang":"zh-CN","locale":{"admin":"站长"},"placeholder":"欢迎留下宝贵的评论！请留下正确的邮箱以便有回复时进行邮箱提醒，请勿发布任何与本文章无关的内容。","requiredMeta":["name","email","url"],"serverURL":"waline.trrw.tech","visitor":""});
+</script><footer class=site-footer><section class=copyright>&copy;
+2022 -
+2025 Trrrrw's Blog</section><section class=powerby><a href=http://beian.miit.gov.cn/ target=_blank>皖ICP备2025089713号</a>
+|
+<a href="https://icp.gov.moe/?keyword=20230421" target=_blank>萌ICP备20230421号</a><br><img src=/备案图标.png width=12> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=34162102003417" rel=noreferrer target=_blank>皖公网安备34162102003417号</a><br>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.30.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://unpkg.com/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://unpkg.com/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://unpkg.com/photoswipe@4.1.3/dist/default-skin/default-skin.css crossorigin=anonymous><link rel=stylesheet href=https://unpkg.com/photoswipe@4.1.3/dist/photoswipe.css crossorigin=anonymous></main></div><script src=/vendor/vibrant/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js defer></script><script>(function(){const e=document.createElement("link");e.href="/vendor/custom-font/custom-font.css",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hexo on Trrrrw's Blog</title><link>https://www.trrw.tech/tags/hexo/</link><description>Recent content in Hexo on Trrrrw's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 04 Jul 2022 22:24:42 +0800</lastBuildDate><atom:link href="https://www.trrw.tech/tags/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>基于Hexo搭建blog网站</title><link>https://www.trrw.tech/p/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BAblog%E7%BD%91%E7%AB%99/</link><pubDate>Mon, 04 Jul 2022 22:24:42 +0800</pubDate><guid>https://www.trrw.tech/p/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BAblog%E7%BD%91%E7%AB%99/</guid><description>&lt;img src="https://www.trrw.tech/p/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BAblog%E7%BD%91%E7%AB%99/Hexo-cover.webp" alt="Featured image of post 基于Hexo搭建blog网站" /&gt;&lt;h2 id="nodejs"&gt;Node.js
+&lt;/h2&gt;&lt;h3 id="介绍"&gt;介绍
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://baike.baidu.com/item/Node.js/7567977" target="_blank" rel="noopener"
+&gt;百度百科&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.runoob.com/nodejs/nodejs-tutorial.html" target="_blank" rel="noopener"
+&gt;菜鸟教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="下载"&gt;下载
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://nodejs.org/en/" target="_blank" rel="noopener"
+&gt;官网&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="安装"&gt;安装
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://blog.csdn.net/chanyeolchichi/article/details/121348541" target="_blank" rel="noopener"
+&gt;CSDN&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;只需要完成第一步即可，第二步&lt;code&gt;修改全局模块路径和缓存路径&lt;/code&gt;可以不做，npm包一般不会很大。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="git"&gt;Git
+&lt;/h2&gt;&lt;h3 id="下载-1"&gt;下载
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://git-scm.com/" target="_blank" rel="noopener"
+&gt;官网&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="使用"&gt;使用
+&lt;/h3&gt;&lt;p&gt;安装完成后右键菜单会有这个
+&lt;img src="https://www.trrw.tech/p/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BAblog%E7%BD%91%E7%AB%99/Git-Bash.webp"
+width="309"
+height="499"
+loading="lazy"
+alt="Git-Bash"
+class="gallery-image"
+data-flex-grow="61"
+data-flex-basis="148px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BAblog%E7%BD%91%E7%AB%99/Git-Bash1.webp"
+width="912"
+height="529"
+loading="lazy"
+alt="Git-Bash1"
+class="gallery-image"
+data-flex-grow="172"
+data-flex-basis="413px"
+&gt;&lt;/p&gt;
+&lt;h3 id="常用命令"&gt;常用命令
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;cd &amp;quot;路径&amp;quot;&lt;/code&gt;
+&lt;blockquote&gt;
+&lt;p&gt;打开路径&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git clone 链接&lt;/code&gt;
+&lt;blockquote&gt;
+&lt;p&gt;克隆仓库，链接为仓库链接。克隆下来的位置是上面那个命令打开的路径。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="新建github仓库"&gt;新建GitHub仓库
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/new" target="_blank" rel="noopener"
+&gt;https://github.com/new&lt;/a&gt;
+填写仓库名&lt;code&gt;blog&lt;/code&gt;，其他默认。&lt;/p&gt;
+&lt;h2 id="安装hexo"&gt;安装Hexo
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npm install -g hexo-cli
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;如果之后打开项目后不能用hexo命令可以再重新安装hexo&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="新建站点"&gt;新建站点
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hexo init &amp;lt;folder&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; &amp;lt;folder&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npm install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;要把&lt;code&gt;&amp;lt;folder&amp;gt;&lt;/code&gt;改为自己的文件夹名，&lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt;也要去掉&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;新建完成后指定文件夹的目录：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── _config.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── package.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── scaffolds
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── source
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| ├── _drafts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| └── _posts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── themes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;_config.yml&lt;/strong&gt;中的一些参数&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;title&lt;/td&gt;
+&lt;td&gt;网站标题&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;subtitle&lt;/td&gt;
+&lt;td&gt;网站副标题&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;description&lt;/td&gt;
+&lt;td&gt;网站描述&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;keywords&lt;/td&gt;
+&lt;td&gt;网站的关键词。支持多个关键词。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;author&lt;/td&gt;
+&lt;td&gt;您的名字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;language&lt;/td&gt;
+&lt;td&gt;网站使用的语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考你的主题的文档自行设置，常见的有 zh-Hans和 zh-CN。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;timezone&lt;/td&gt;
+&lt;td&gt;网站时区。Hexo 默认使用您电脑的时区。请参考 时区列表 进行设置，如 America/New_York, Japan, 和 UTC 。一般的，对于中国大陆地区可以使用 Asia/Shanghai。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;更多详细说明移步&lt;a class="link" href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener"
+&gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⭐最主要的是url和root，如果不自定义域名的话，url为&lt;code&gt;https://&amp;lt;username&amp;gt;.github.io/&amp;lt;repositories&amp;gt;/&lt;/code&gt;，root为&lt;code&gt;/&amp;lt;repositories&amp;gt;/&lt;/code&gt;。如果设置不正确的话可能会导致网页没有css样式。&lt;/li&gt;
+&lt;li&gt;参数名后的冒号后面要有一个空格&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="安装主题"&gt;安装主题
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;一般主题都会有使用教程，这里只展示了使用主题文件安装的过程。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;从&lt;a class="link" href="https://hexo.io/themes/" target="_blank" rel="noopener"
+&gt;主题站&lt;/a&gt;找到自己喜欢的主题，点击标题进入对应GitHub仓库下载&lt;/li&gt;
+&lt;li&gt;将主题文件放到一个单独文件夹&lt;code&gt;&amp;lt;ThemeFolder&amp;gt;&lt;/code&gt;，并将改文件夹放在&lt;code&gt;themes&lt;/code&gt;文件夹里&lt;/li&gt;
+&lt;li&gt;在站点的_config.yml文件中theme的内容更改为&lt;code&gt;&amp;lt;ThemeFolder&amp;gt;&lt;/code&gt;即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;一个主题可能会有以下的结构：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── _config.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── languages
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── layout
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── scripts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── source
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;_config.yml&lt;/strong&gt;
+主题的配置文件。和 Hexo 配置文件不是同一个文件，要注意区分。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如需更换主题，只需要将新主题的文件夹放到正确位置，再将站点的&lt;code&gt;_config.yml&lt;/code&gt;文件中&lt;code&gt;theme&lt;/code&gt;的内容更改为新的主题名即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="生成静态文件"&gt;生成静态文件
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hexo g &lt;span class="c1"&gt;#hexo generate的缩写&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;网页需要的文件都在public文件夹下，将该文件夹下文件上传到GitHub仓库即可。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="启动服务"&gt;启动服务
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hexo s &lt;span class="c1"&gt;#hexo server的缩写&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;用这个可以先在本地预览你的网页&lt;br&gt;
+如果不能用的话先安装，&lt;code&gt;--save&lt;/code&gt;是把npm包安装在这个项目中并记录在&lt;code&gt;package.json&lt;/code&gt;中&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npm install hexo-server --save
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="新建文章"&gt;新建文章
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hexo new &lt;span class="o"&gt;[&lt;/span&gt;layout&lt;span class="o"&gt;]&lt;/span&gt; &amp;lt;title&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;同样&lt;code&gt;[]&lt;/code&gt;和&lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt;也要去掉&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;布局（Layout）&lt;/th&gt;
+&lt;th&gt;路径&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;post&lt;/td&gt;
+&lt;td&gt;source/_posts&lt;/td&gt;
+&lt;td&gt;文章&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;page&lt;/td&gt;
+&lt;td&gt;source&lt;/td&gt;
+&lt;td&gt;页面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;draft&lt;/td&gt;
+&lt;td&gt;source/_drafts&lt;/td&gt;
+&lt;td&gt;草稿&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="部署到github"&gt;部署到GitHub
+&lt;/h2&gt;&lt;p&gt;打开网站的&lt;code&gt;_config.yml&lt;/code&gt;
+在文件底部找到以下内容并补全：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;git&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://github.com/Trrrrw/blog&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## 你的仓库链接&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;branch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;main&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后在blog文件夹中打开终端输入命令&lt;code&gt;npm install hexo-deployer-git --save&lt;/code&gt;安装部署插件。
+之后输入命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hexo clean &lt;span class="c1"&gt;#清除已生成的静态文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hexo g &lt;span class="c1"&gt;#hexo generate 生成静态文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hexo d &lt;span class="c1"&gt;#hexo deploy 生成静态文件并部署到仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;如果在部署的时候出现 &lt;code&gt;Failed to connect to github.com port&lt;/code&gt;之类的错误，在终端中执行&lt;code&gt;git config --global --unset http.proxy&lt;/code&gt;和&lt;code&gt;git config --global --unset https.proxy&lt;/code&gt;应该就行了。
+完成之后要去GitHub仓库里找到Settings -&amp;gt; Pages -&amp;gt; Build and deployment -&amp;gt; Branch，设置成&lt;code&gt;main&lt;/code&gt;分支，路径为&lt;code&gt;/(root)&lt;/code&gt;。点&lt;code&gt;save&lt;/code&gt;保存之后就能在https://username.github.io/repo/ 里看到你的网页。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="自定义域名"&gt;自定义域名
+&lt;/h2&gt;&lt;h3 id="购买域名"&gt;购买域名
+&lt;/h3&gt;&lt;p&gt;例：&lt;code&gt;example.com&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id="域名解析"&gt;域名解析
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;在电脑上执行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ping username.github.io
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;得到&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;正在 Ping username.github.io [IP地址] 具有 32 字节的数据:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;记住上面的&lt;strong&gt;IP地址&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;在购买的域名&lt;strong&gt;控制台&lt;/strong&gt;找到&lt;code&gt;域名列表-域名解析&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;添加解析&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;主机记录&lt;/th&gt;
+&lt;th&gt;记录类型&lt;/th&gt;
+&lt;th&gt;解析路线&lt;/th&gt;
+&lt;th&gt;记录值&lt;/th&gt;
+&lt;th&gt;TTL&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;AAAA&lt;/td&gt;
+&lt;td&gt;默认&lt;/td&gt;
+&lt;td&gt;IPV6地址&lt;/td&gt;
+&lt;td&gt;10 分钟&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;默认&lt;/td&gt;
+&lt;td&gt;IPV4地址&lt;/td&gt;
+&lt;td&gt;10 分钟&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;CNAME&lt;/td&gt;
+&lt;td&gt;默认&lt;/td&gt;
+&lt;td&gt;username.github.io&lt;/td&gt;
+&lt;td&gt;10 分钟&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;www&lt;/td&gt;
+&lt;td&gt;CNAME&lt;/td&gt;
+&lt;td&gt;默认&lt;/td&gt;
+&lt;td&gt;username.github.io&lt;/td&gt;
+&lt;td&gt;10 分钟&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前两个行用&lt;strong&gt;有一个即可&lt;/strong&gt;，但好像都没什么用。还会和第三行冲突。
+可以&lt;strong&gt;只有后面两行&lt;/strong&gt;，第四行的&lt;code&gt;www&lt;/code&gt;可以换成自己喜欢的、符合规范的前缀，可以设成&lt;code&gt;blog&lt;/code&gt;来说明这个网站是一个blog网站。也可以只有第三行，这样就是一个裸域名比较好记忆。
+如果修改了的话下面两项设置要把&lt;code&gt;www&lt;/code&gt;改成对应的前缀或者删除。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="绑定github-page"&gt;绑定GitHub Page
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;在GitHub仓库中点击&lt;code&gt;Settings-&amp;gt;Pages&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在Custom domain下填写&lt;code&gt;www.example.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;点&lt;code&gt;Save&lt;/code&gt;保存&lt;/li&gt;
+&lt;li&gt;等待GitHub检查完DNS勾选下面的&lt;code&gt;Enforce HTTPS&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="修改hexo的_configyml"&gt;修改Hexo的_config.yml
+&lt;/h3&gt;&lt;p&gt;在Hexo的&lt;code&gt;_config.yml&lt;/code&gt;中修改&lt;code&gt;url&lt;/code&gt;和&lt;code&gt;root&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;url: https://www.example.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;root: /
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;再重新部署一次即可&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考文章：
+&lt;a class="link" href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener"
+&gt;官方文档&lt;/a&gt;
+&lt;a class="link" href="https://markdown.com.cn/" target="_blank" rel="noopener"
+&gt;Markdown教程&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

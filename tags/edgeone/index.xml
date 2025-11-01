@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>EdgeOne on Trrrrw's Blog</title><link>https://www.trrw.tech/tags/edgeone/</link><description>Recent content in EdgeOne on Trrrrw's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 25 Oct 2025 19:30:50 +0800</lastBuildDate><atom:link href="https://www.trrw.tech/tags/edgeone/index.xml" rel="self" type="application/rss+xml"/><item><title>解决EdgeOnePages返回418</title><link>https://www.trrw.tech/p/%E8%A7%A3%E5%86%B3edgeonepages%E8%BF%94%E5%9B%9E418/</link><pubDate>Sat, 25 Oct 2025 19:30:50 +0800</pubDate><guid>https://www.trrw.tech/p/%E8%A7%A3%E5%86%B3edgeonepages%E8%BF%94%E5%9B%9E418/</guid><description>&lt;img src="https://www.trrw.tech/p/%E8%A7%A3%E5%86%B3edgeonepages%E8%BF%94%E5%9B%9E418/cover.webp" alt="Featured image of post 解决EdgeOnePages返回418" /&gt;&lt;p&gt;原因就是设置自定义域名以及证书后，EdgeOne可能会使用一个错误的证书&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/%E8%A7%A3%E5%86%B3edgeonepages%E8%BF%94%E5%9B%9E418/edgeone-fault-ssl.webp"
+width="1881"
+height="1080"
+loading="lazy"
+alt="EdgeOne可能会使用一个错误的证书"
+class="gallery-image"
+data-flex-grow="174"
+data-flex-basis="418px"
+&gt;&lt;/p&gt;
+&lt;p&gt;解决方法就是重新部署一遍证书，然后等
+&lt;img src="meme-griseo.webp" width=100 /&gt;&lt;/p&gt;
+&lt;h2 id="附录"&gt;附录
+&lt;/h2&gt;&lt;h3 id="文章封面"&gt;文章封面
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://x.com/Yu_Hydra0319/status/1980326527909908763" target="_blank" rel="noopener"
+&gt;X@Yu_Hydra0319&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

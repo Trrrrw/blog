@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C++ on Trrrrw's Blog</title><link>https://www.trrw.tech/tags/c++/</link><description>Recent content in C++ on Trrrrw's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 02 Jun 2025 23:03:45 +0800</lastBuildDate><atom:link href="https://www.trrw.tech/tags/c++/index.xml" rel="self" type="application/rss+xml"/><item><title>VSCode 配置 C、C++ 编程运行环境</title><link>https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link><pubDate>Mon, 02 Jun 2025 23:03:45 +0800</pubDate><guid>https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid><description>&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/cover.webp" alt="Featured image of post VSCode 配置 C、C++ 编程运行环境" /&gt;&lt;h2 id="前言"&gt;前言
+&lt;/h2&gt;&lt;p&gt;前段时间从VSCode换到了字节的Trae，发现超级好用。于是就把Clion和VSCode都卸载了，但是Trae没法安装VSCode的C/C++插件，所以就研究了一下怎么在Trae中使用MSVC+CMake+Clang-Format来写C/C++代码&lt;/p&gt;
+&lt;h2 id="msvc"&gt;MSVC
+&lt;/h2&gt;&lt;p&gt;前往 &lt;a class="link" href="https://visualstudio.microsoft.com/zh-hans/downloads/" target="_blank" rel="noopener"
+&gt;Visual Studio 下载页面&lt;/a&gt;，不要下载 VS2022，往下翻，在 &lt;strong&gt;用于Visual Studio的工具&lt;/strong&gt; 中有个 &lt;strong&gt;Visual Studio 2022 生成工具&lt;/strong&gt;，点击右侧的下载&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/download-vs.webp"
+width="2442"
+height="1234"
+loading="lazy"
+alt="下载Visual Studio 2022 生成工具"
+class="gallery-image"
+data-flex-grow="197"
+data-flex-basis="474px"
+&gt;&lt;/p&gt;
+&lt;p&gt;下载完成后安装，在开始菜单中找到 &lt;strong&gt;Visual Studio Installer&lt;/strong&gt;，点击打开
+可以先在 &lt;strong&gt;安装位置&lt;/strong&gt; 处修改 &lt;strong&gt;MSVC&lt;/strong&gt; 的安装位置&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vs-path.webp"
+width="1920"
+height="1080"
+loading="lazy"
+alt="修改MSVC安装位置"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;&lt;/p&gt;
+&lt;p&gt;接着在 &lt;strong&gt;单个组件&lt;/strong&gt; 中勾选 &lt;strong&gt;Windows 11 SDK&lt;/strong&gt; 和 &lt;strong&gt;MSVC v143 - VS 2022 C++ x64/x86 生成工具(最新)&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/win-11-sdk.webp"
+width="1920"
+height="1203"
+loading="lazy"
+alt="Windows 11 SDK"
+class="gallery-image"
+data-flex-grow="159"
+data-flex-basis="383px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/msvc.webp"
+width="1920"
+height="1203"
+loading="lazy"
+alt="MSVC v143 - VS 2022 C&amp;#43;&amp;#43; x64/x86 生成工具"
+class="gallery-image"
+data-flex-grow="159"
+data-flex-basis="383px"
+&gt;&lt;/p&gt;
+&lt;p&gt;最后点击右下角的安装&lt;/p&gt;
+&lt;h2 id="cmake"&gt;Cmake
+&lt;/h2&gt;&lt;p&gt;见 &lt;a class="link" href="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/#cmake" target="_blank" rel="noopener"
+&gt;Windows11上配置C、C++环境&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="clang-format"&gt;Clang-Format
+&lt;/h2&gt;&lt;p&gt;由于Trae使用的是open-vsx的镜像作为市场，其中没有 C/C++ 这个插件&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/extension-c.webp"
+width="2069"
+height="1279"
+loading="lazy"
+alt="C/C&amp;#43;&amp;#43; 插件"
+class="gallery-image"
+data-flex-grow="161"
+data-flex-basis="388px"
+&gt;&lt;/p&gt;
+&lt;p&gt;所以想要格式化代码，需要使用 &lt;strong&gt;Clang-Format&lt;/strong&gt; 这个插件&lt;br&gt;
+在下载插件前，需要先 &lt;a class="link" href="https://llvm.org/builds/" target="_blank" rel="noopener"
+&gt;下载 &lt;strong&gt;Clang-Format&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/download-clang-format.webp"
+width="3311"
+height="1977"
+loading="lazy"
+alt="Clang-Format下载"
+class="gallery-image"
+data-flex-grow="167"
+data-flex-basis="401px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;藏的真深🫠&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;最后安装 &lt;strong&gt;Clang-Format&lt;/strong&gt; 插件&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/extension-clang-format.webp"
+width="764"
+height="225"
+loading="lazy"
+alt="Clang-Format插件"
+class="gallery-image"
+data-flex-grow="339"
+data-flex-basis="814px"
+&gt;&lt;/p&gt;
+&lt;h2 id="新建项目"&gt;新建项目
+&lt;/h2&gt;&lt;p&gt;新建一个文件夹，在其中创建 &lt;strong&gt;CMakeLists.txt&lt;/strong&gt; 和 &lt;strong&gt;main.cpp&lt;/strong&gt; 文件&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cmake" data-lang="cmake"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# CMakeLists.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;cmake_minimum_required&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;VERSION&lt;/span&gt; &lt;span class="s"&gt;4.0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# 该项目所需的CMake最低版本
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;project&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;test&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# 项目名称
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;CMAKE_CXX_STANDARD&lt;/span&gt; &lt;span class="s"&gt;26&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# 使用的C++标准
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;add_executable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;test&lt;/span&gt; &lt;span class="s"&gt;main.cpp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# 生成可执行文件: &amp;#34;test.exe&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// main.cpp
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;用 &lt;strong&gt;vscode&lt;/strong&gt; 或者 &lt;strong&gt;Trae&lt;/strong&gt; 打开这个文件夹，此时 &lt;strong&gt;CMake 插件&lt;/strong&gt; 应该会自动弹出 &lt;strong&gt;选择工具包的对话框&lt;/strong&gt;，选择第一个64位的即可&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/select-toolkit.webp"
+width="951"
+height="412"
+loading="lazy"
+alt="选择工具包"
+class="gallery-image"
+data-flex-grow="230"
+data-flex-basis="553px"
+&gt;&lt;/p&gt;
+&lt;p&gt;之后下面会的输出栏中会输出 &lt;strong&gt;CMake&lt;/strong&gt; 的输出，如果中文部分出现乱码，需要在设置中搜索 &lt;strong&gt;output&lt;/strong&gt;，然后找到 &lt;strong&gt;Cmake: Output Log Encoding&lt;/strong&gt;，将其修改为 &lt;strong&gt;utf-8&lt;/strong&gt;&lt;br&gt;
+之后每次修改 &lt;strong&gt;CMakeLists.txt&lt;/strong&gt; 后，&lt;strong&gt;CMake 插件&lt;/strong&gt; 都会自动重新生成项目，输出栏中也会输出 &lt;strong&gt;CMake&lt;/strong&gt; 的输出&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/cmake-output-setting.webp"
+width="1839"
+height="872"
+loading="lazy"
+alt="Cmake: Output Log Encoding"
+class="gallery-image"
+data-flex-grow="210"
+data-flex-basis="506px"
+&gt;&lt;/p&gt;
+&lt;h2 id="运行项目"&gt;运行项目
+&lt;/h2&gt;&lt;p&gt;打开 &lt;strong&gt;main.cpp&lt;/strong&gt;，点击 &lt;strong&gt;左下角&lt;/strong&gt; 的 &lt;strong&gt;在终端窗口中启动所选目标&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/run-command.webp"
+width="1186"
+height="583"
+loading="lazy"
+alt="在终端窗口中启动所选目标"
+class="gallery-image"
+data-flex-grow="203"
+data-flex-basis="488px"
+&gt;&lt;/p&gt;
+&lt;h2 id="后记"&gt;后记
+&lt;/h2&gt;&lt;p&gt;这个文章只是记录一下环境配置的过程，平常不怎么写 &lt;strong&gt;C/C++&lt;/strong&gt; 代码，之前也写过一个配置 &lt;strong&gt;gcc&lt;/strong&gt; 的文章，但是那个 &lt;strong&gt;gcc&lt;/strong&gt; 版本太低了。&lt;/p&gt;
+&lt;h2 id="附录"&gt;附录
+&lt;/h2&gt;&lt;h3 id="参考文献"&gt;参考文献
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class="link" href="https://blog.csdn.net/braised_fish/article/details/116236406" target="_blank" rel="noopener"
+&gt;vscode 内置cmake output窗口乱码&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="文章封面"&gt;文章封面
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://www.pixiv.net/artworks/126908719" target="_blank" rel="noopener"
+&gt;セルマ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Windows11上配置C、C++环境</title><link>https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/</link><pubDate>Wed, 06 Sep 2023 21:53:01 +0800</pubDate><guid>https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/</guid><description>&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/pixiv-75321273.webp" alt="Featured image of post Windows11上配置C、C++环境" /&gt;&lt;h2 id="mingw"&gt;MinGW
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;MinGW: A native Windows port of the GNU Compiler Collection (GCC), with freely distributable import libraries and header files for building native Windows applications; includes extensions to the MSVC runtime to support C99 functionality. All of MinGW&amp;rsquo;s software will execute on the 64bit Windows platforms.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="下载"&gt;下载
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://sourceforge.net/projects/mingw/" target="_blank" rel="noopener"
+&gt;MinGW - Minimalist GNU for Windows&lt;/a&gt;
+&lt;a href="https://sourceforge.net/projects/mingw/files/latest/download"&gt;&lt;button&gt;直接下载&lt;/button&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="安装"&gt;安装
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;安装时选择好安装位置(不能有中文或空格)，其他默认即可。
+&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/mingw-install-1.webp"
+width="905"
+height="700"
+loading="lazy"
+alt="mingw-install-1"
+class="gallery-image"
+data-flex-grow="129"
+data-flex-basis="310px"
+&gt;&lt;/li&gt;
+&lt;li&gt;安装完成后打开MinGW，勾选&lt;code&gt;mingw32-base&lt;/code&gt;，&lt;code&gt;mingw32-gcc-g++&lt;/code&gt;，分别是C/C++编译器。
+&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/mingw-install-2.webp"
+width="1207"
+height="618"
+loading="lazy"
+alt="mingw-install-2"
+class="gallery-image"
+data-flex-grow="195"
+data-flex-basis="468px"
+&gt;&lt;/li&gt;
+&lt;li&gt;点击&lt;code&gt;Installation&lt;/code&gt; -&amp;gt; &lt;code&gt;Apply Changes&lt;/code&gt;，在弹出窗口中点击&lt;code&gt;Apply&lt;/code&gt;。
+&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/mingw-install-3.webp"
+width="730"
+height="322"
+loading="lazy"
+alt="mingw-install-3"
+class="gallery-image"
+data-flex-grow="226"
+data-flex-basis="544px"
+&gt;
+&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/mingw-install-4.webp"
+width="916"
+height="612"
+loading="lazy"
+alt="mingw-install-4"
+class="gallery-image"
+data-flex-grow="149"
+data-flex-basis="359px"
+&gt;&lt;/li&gt;
+&lt;li&gt;将&lt;code&gt;MinGW&lt;/code&gt;添加到系统环境变量
+&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/edit-environment-path-1.webp"
+width="970"
+height="927"
+loading="lazy"
+alt="edit-environment-path-1"
+class="gallery-image"
+data-flex-grow="104"
+data-flex-basis="251px"
+&gt;
+&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/edit-environment-path-2.webp"
+width="970"
+height="926"
+loading="lazy"
+alt="edit-environment-path-2"
+class="gallery-image"
+data-flex-grow="104"
+data-flex-basis="251px"
+&gt;
+&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/edit-environment-path-mingw.webp"
+width="970"
+height="926"
+loading="lazy"
+alt="edit-environment-path-mingw"
+class="gallery-image"
+data-flex-grow="104"
+data-flex-basis="251px"
+&gt;&lt;/li&gt;
+&lt;li&gt;在终端中输入&lt;code&gt;gcc -v&lt;/code&gt;查看是否安装成功。&lt;/li&gt;
+&lt;li&gt;进入MinGW安装位置&lt;code&gt;C:\MinGW\bin&lt;/code&gt;，将&lt;code&gt;mingw32-make.exe&lt;/code&gt;复制一个出来改成&lt;code&gt;make.exe&lt;/code&gt;方便使用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;到这里你可以使用&lt;code&gt;gcc -o main main.c&lt;/code&gt;来编译C程序。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="cmake"&gt;CMake
+&lt;/h2&gt;&lt;h3 id="下载-1"&gt;下载
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://cmake.org/download/" target="_blank" rel="noopener"
+&gt;CMake下载地址&lt;/a&gt;，选择正确的平台，一般是x64。
+&lt;a href="https://github.com/Kitware/CMake/releases/download/v3.27.4/cmake-3.27.4-windows-x86_64.msi"&gt;&lt;button&gt;直接下载&lt;/button&gt;&lt;/a&gt;
+&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/cmake-download.webp"
+width="1752"
+height="1080"
+loading="lazy"
+alt="cmake-download"
+class="gallery-image"
+data-flex-grow="162"
+data-flex-basis="389px"
+&gt;&lt;/p&gt;
+&lt;h3 id="安装-1"&gt;安装
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;双击运行下载的&lt;code&gt;.msi&lt;/code&gt;文件。
+&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/cmake-install-1.webp"
+width="773"
+height="599"
+loading="lazy"
+alt="cmake-install-1"
+class="gallery-image"
+data-flex-grow="129"
+data-flex-basis="309px"
+&gt;&lt;/li&gt;
+&lt;li&gt;选择第二个将&lt;code&gt;CMake&lt;/code&gt;添加到系统环境变量，桌面快捷方式根据个人习惯选择。
+&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/cmake-install-2.webp"
+width="770"
+height="599"
+loading="lazy"
+alt="cmake-install-2"
+class="gallery-image"
+data-flex-grow="128"
+data-flex-basis="308px"
+&gt;&lt;/li&gt;
+&lt;li&gt;选择安装位置。
+&lt;img src="https://www.trrw.tech/p/windows11%E4%B8%8A%E9%85%8D%E7%BD%AEcc-%E7%8E%AF%E5%A2%83/cmake-install-3.webp"
+width="770"
+height="596"
+loading="lazy"
+alt="cmake-install-3"
+class="gallery-image"
+data-flex-grow="129"
+data-flex-basis="310px"
+&gt;&lt;/li&gt;
+&lt;li&gt;在终端中输入&lt;code&gt;cmake --version&lt;/code&gt;查看是否安装成功。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;font color="red"&gt;系统环境变量修改后要重启终端才能生效&lt;/font&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="使用cmake编译"&gt;使用CMake编译
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;创建一个&lt;code&gt;test&lt;/code&gt;文件夹。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir test&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;在文件夹中新建&lt;code&gt;main.c&lt;/code&gt;和&lt;code&gt;CMakeLists.txt&lt;/code&gt;文件，并在其中分别写入以下内容。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// main.c
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Hello World!&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cmake" data-lang="cmake"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# CMakeLists.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;cmake_minimum_required&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;VERSION&lt;/span&gt; &lt;span class="s"&gt;3.27&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;project&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;test&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# 这里的&amp;#34;C:/MinGW/bin&amp;#34;路径是你MinGW的路径
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;CMAKE_CXX_COMPILER&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;C:/MinGW/bin/g++.exe&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;CMAKE_C_COMPILER&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;C:/MinGW/bin/gcc.exe&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;add_executable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;test&lt;/span&gt; &lt;span class="s"&gt;main.c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start="3"&gt;
+&lt;li&gt;在&lt;code&gt;test&lt;/code&gt;文件夹下创建&lt;code&gt;build&lt;/code&gt;文件夹，并用CMake编译。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir build&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; build
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cmake .. -G &lt;span class="s2"&gt;&amp;#34;MinGW Makefiles&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;make
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="错误"&gt;错误
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;The C compiler is not able to compile a simple test program.&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;运行：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cmake .. -G &lt;span class="s2"&gt;&amp;#34;MinGW Makefiles&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;输出：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PS D:&lt;span class="se"&gt;\T&lt;/span&gt;rrrrw&lt;span class="se"&gt;\文&lt;/span&gt;档&lt;span class="se"&gt;\C\t&lt;/span&gt;est&lt;span class="se"&gt;\b&lt;/span&gt;uild&amp;gt; cmake .. -G &lt;span class="s2"&gt;&amp;#34;MinGW Makefiles&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-- The C compiler identification is GNU 6.3.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-- The CXX compiler identification is GNU 6.3.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-- Detecting C compiler ABI info
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-- Detecting C compiler ABI info - failed
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-- Check &lt;span class="k"&gt;for&lt;/span&gt; working C compiler: D:/MinGW/bin/gcc.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-- Check &lt;span class="k"&gt;for&lt;/span&gt; working C compiler: D:/MinGW/bin/gcc.exe - broken
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CMake Error at D:/Trrrrw/应用/命令行工具/cmake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:67 &lt;span class="o"&gt;(&lt;/span&gt;message&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; The C compiler
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;D:/MinGW/bin/gcc.exe&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; is not able to compile a simple &lt;span class="nb"&gt;test&lt;/span&gt; program.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; It fails with the following output:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Change Dir: &lt;span class="s1"&gt;&amp;#39;D:/Trrrrw/文档/C/test/build/CMakeFiles/CMakeScratch/TryCompile-qihtzh&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Run Build Command&lt;span class="o"&gt;(&lt;/span&gt;s&lt;span class="o"&gt;)&lt;/span&gt;: D:/Trrrrw/应用/命令行工具/cmake/bin/cmake.exe -E env &lt;span class="nv"&gt;VERBOSE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; D:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_22fc3/fast
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; D:/MinGW/bin/mingw32-make.exe -f CMakeFiles&lt;span class="se"&gt;\c&lt;/span&gt;mTC_22fc3.dir&lt;span class="se"&gt;\b&lt;/span&gt;uild.make CMakeFiles/cmTC_22fc3.dir/build
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; mingw32-make.exe&lt;span class="o"&gt;[&lt;/span&gt;1&lt;span class="o"&gt;]&lt;/span&gt;: Entering directory &lt;span class="s1"&gt;&amp;#39;D:/Trrrrw/文档/C/test/build/CMakeFiles/CMakeScratch/TryCompile-qihtzh&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 系统找不到指定的路径。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; CMakeFiles&lt;span class="se"&gt;\c&lt;/span&gt;mTC_22fc3.dir&lt;span class="se"&gt;\b&lt;/span&gt;uild.make:76: recipe &lt;span class="k"&gt;for&lt;/span&gt; target &lt;span class="s1"&gt;&amp;#39;CMakeFiles/cmTC_22fc3.dir/testCCompiler.c.obj&amp;#39;&lt;/span&gt; failed
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; mingw32-make.exe&lt;span class="o"&gt;[&lt;/span&gt;1&lt;span class="o"&gt;]&lt;/span&gt;: *** &lt;span class="o"&gt;[&lt;/span&gt;CMakeFiles/cmTC_22fc3.dir/testCCompiler.c.obj&lt;span class="o"&gt;]&lt;/span&gt; Error &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; mingw32-make.exe&lt;span class="o"&gt;[&lt;/span&gt;1&lt;span class="o"&gt;]&lt;/span&gt;: Leaving directory &lt;span class="s1"&gt;&amp;#39;D:/Trrrrw/文档/C/test/build/CMakeFiles/CMakeScratch/TryCompile-qihtzh&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Makefile:126: recipe &lt;span class="k"&gt;for&lt;/span&gt; target &lt;span class="s1"&gt;&amp;#39;cmTC_22fc3/fast&amp;#39;&lt;/span&gt; failed
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; mingw32-make.exe: *** &lt;span class="o"&gt;[&lt;/span&gt;cmTC_22fc3/fast&lt;span class="o"&gt;]&lt;/span&gt; Error &lt;span class="m"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; CMake will not be able to correctly generate this project.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Call Stack &lt;span class="o"&gt;(&lt;/span&gt;most recent call first&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; CMakeLists.txt:2 &lt;span class="o"&gt;(&lt;/span&gt;project&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-- Configuring incomplete, errors occurred!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;解决：&lt;/strong&gt;
+重新安装cmake，使用安装包安装，不要下载压缩包手动添加环境变量&lt;/p&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;&lt;code&gt;CMake Error: Target DependInfo.cmake file not found&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;运行：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;make
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;输出：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CMake Error: Target DependInfo.cmake file not found
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;make&lt;span class="o"&gt;[&lt;/span&gt;2&lt;span class="o"&gt;]&lt;/span&gt;: *** No rule to make target &lt;span class="s1"&gt;&amp;#39;D:/Trrrrw//C/test/main.c&amp;#39;&lt;/span&gt;, needed by &lt;span class="s1"&gt;&amp;#39;CMakeFiles/test.dir/main.c.obj&amp;#39;&lt;/span&gt;. Stop.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CMakeFiles/Makefile2:82: recipe &lt;span class="k"&gt;for&lt;/span&gt; target &lt;span class="s1"&gt;&amp;#39;CMakeFiles/test.dir/all&amp;#39;&lt;/span&gt; failed
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;make&lt;span class="o"&gt;[&lt;/span&gt;1&lt;span class="o"&gt;]&lt;/span&gt;: *** &lt;span class="o"&gt;[&lt;/span&gt;CMakeFiles/test.dir/all&lt;span class="o"&gt;]&lt;/span&gt; Error &lt;span class="m"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Makefile:90: recipe &lt;span class="k"&gt;for&lt;/span&gt; target &lt;span class="s1"&gt;&amp;#39;all&amp;#39;&lt;/span&gt; failed
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;make: *** &lt;span class="o"&gt;[&lt;/span&gt;all&lt;span class="o"&gt;]&lt;/span&gt; Error &lt;span class="m"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;解决：&lt;/strong&gt;
+文件夹路径&lt;font color="red"&gt;不能有中文&lt;/font&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考文章：
+&lt;a class="link" href="http://c.biancheng.net/view/8077.html" target="_blank" rel="noopener"
+&gt;MinGW下载和安装教程&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
