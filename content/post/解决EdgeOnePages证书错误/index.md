@@ -1,5 +1,5 @@
 +++
-title = '解决EdgeOnePages返回418'
+title = '解决EdgeOnePages证书错误'
 date = '2025-10-25T19:30:50+08:00'
 tags = ['EdgeOne']
 categories = ['教程']

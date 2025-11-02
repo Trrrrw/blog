@@ -1,4 +1,4 @@
-name: Sync to server
+name: Sync to GitHub Pages
 on:
     push:
         branches:
