@@ -28,7 +28,6 @@
 <script>
     (async () => {
         const els = document.querySelectorAll('.article-analysic')
-        console.log(els)
         if (!els.length) return
 
         const endOfDay = new Date()
@@ -40,12 +39,10 @@
         }
         for (const el of els) {
             const search = el.dataset.path || '/'
-            console.log('search', decodeURIComponent(search))
             let pageviews = 0
             try {
                 const res = await fetch(`https://umami.trrw.tech/api/websites/0d3ae99b-13c2-453f-8487-2f4e553b79c3/metrics/expanded?startAt=1751254971548&endAt=${endAt}&unit=day&timezone=Asia%2FShanghai&search=${search}&type=path`, { headers: headers })
                 const data = await res.json()
-                console.log('umami data', data)
                 if (Array.isArray(data) && data.length > 0)
                     pageviews = data[0].pageviews || 0
             } finally {

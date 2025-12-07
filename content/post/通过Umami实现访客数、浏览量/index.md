@@ -161,7 +161,6 @@ Umami 是有 API 的 [(API Reference)](https://umami.is/docs/api)
 <script>
     (async () => {
         const els = document.querySelectorAll('.article-analysic')
-        console.log(els)
         if (!els.length) return
 
         const endOfDay = new Date()
@@ -173,12 +172,10 @@ Umami 是有 API 的 [(API Reference)](https://umami.is/docs/api)
         }
         for (const el of els) {
             const search = el.dataset.path || '/'
-            console.log('search', decodeURIComponent(search))
             let pageviews = 0
             try {
                 const res = await fetch(`https://umami.trrw.tech/api/websites/:websiteId/metrics/expanded?startAt=:startAt&endAt=${endAt}&unit=day&timezone=Asia%2FShanghai&search=${search}&type=path`, { headers: headers })
                 const data = await res.json()
-                console.log('umami data', data)
                 if (Array.isArray(data) && data.length > 0)
                     pageviews = data[0].pageviews || 0
             } finally {
