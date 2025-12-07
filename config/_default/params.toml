@@ -12,6 +12,8 @@ customText = """
 <a href="https://icp.gov.moe/?keyword=20230421" target="_blank">萌ICP备20230421号</a>
 <br>
 <img src="/备案图标.png" width="12"/> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=34162102003417" rel="noreferrer" target="_blank">皖公网安备34162102003417号</a>
+<br>
+<span id="visit-info"></span>
 """
 
 [dateFormat]

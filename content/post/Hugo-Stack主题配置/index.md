@@ -132,7 +132,7 @@ icon = "home"
 - 归档页面创建这个文件即可：**content/page/archives/index.md**
 
 ### 链接
-这一部分可以参考 *「[Stack主题友链页面美化]({{< ref "Stack主题友链页面美化" >}})」*  
+这一部分可以参考 *「[Stack主题友链等页面美化]({{< ref "Stack主题友链等页面美化" >}})」*  
 下面是**Stack**默认的**links**页面实现方式
 
 ```markdown

@@ -1,5 +1,5 @@
 +++
-title = 'Stack主题友链页面美化'
+title = 'Stack主题友链等页面美化'
 date = '2025-06-24T21:05:33+08:00'
 tags = ['Stack', 'Hugo']
 categories = ['建站记录']
@@ -57,6 +57,12 @@ Stack默认的友链是一行一个，友链一多就会导致页面很长，影
 
 .article-image>img {
     // 给文章卡片、友链卡片等的图标添加圆角
+    border-radius: 10px;
+}
+
+.section-image>img {
+    // 给categories的图标添加圆角
+    object-fit: cover;
     border-radius: 10px;
 }
 ```

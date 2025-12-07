@@ -44,6 +44,12 @@
     border-radius: 10px;
 }
 
+.section-image>img {
+    // 给categories的图标添加圆角
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 // Waline
 :root {
     --waline-theme-color: var(--accent-color) !important;
