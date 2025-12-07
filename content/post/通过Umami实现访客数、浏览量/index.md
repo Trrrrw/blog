@@ -16,7 +16,7 @@ Umami 是有 API 的 [(API Reference)](https://umami.is/docs/api)
 
 ![API 访问请求](token-get-1.webp)
 
-在请求标头里找到 `Authorization` 和 `Cookie` copy下来之后替换掉后面代码中的 `:authorization` 和 `:cookie`
+在请求标头里找到 `Authorization` copy下来之后替换掉后面代码中的 `:authorization`
 
 
 ## 浏览量、访客、访问次数
@@ -39,8 +39,7 @@ Umami 是有 API 的 [(API Reference)](https://umami.is/docs/api)
         endOfDay.setHours(23, 59, 59, 999)
         const endAt = endOfDay.getTime()
         const headers = {
-            'authorization': ':authorization',
-            'cookie': ':cookie'
+            'authorization': ':authorization'
         }
         try {
             const res = await fetch(`https://umami.trrw.tech/api/websites/:websiteId/stats?startAt=:startAt&endAt=${endAt}&unit=day&timezone=Asia%2FShanghai`, { headers: headers })
@@ -167,8 +166,7 @@ Umami 是有 API 的 [(API Reference)](https://umami.is/docs/api)
         endOfDay.setHours(23, 59, 59, 999)
         const endAt = endOfDay.getTime()
         const headers = {
-            'authorization': ':authorization',
-            'cookie': ':cookie'
+            'authorization': ':authorization'
         }
         for (const el of els) {
             const search = el.dataset.path || '/'
