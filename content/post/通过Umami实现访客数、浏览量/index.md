@@ -4,7 +4,6 @@ date = '2025-12-06T23:56:40+08:00'
 tags = ['Umami','Hugo','Stack']
 categories = ['建站记录']
 image = 'cover.webp'
-draft = true
 +++
 
 ## 获取 Token
