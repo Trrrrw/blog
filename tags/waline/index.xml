@@ -575,7 +575,7 @@ data-flex-basis="342px"
 &lt;li&gt;归档页面创建这个文件即可：&lt;strong&gt;content/page/archives/index.md&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="链接"&gt;链接
-&lt;/h3&gt;&lt;p&gt;这一部分可以参考 &lt;em&gt;「&lt;a class="link" href="https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/" &gt;Stack主题友链页面美化&lt;/a&gt;」&lt;/em&gt;&lt;br&gt;
+&lt;/h3&gt;&lt;p&gt;这一部分可以参考 &lt;em&gt;「&lt;a class="link" href="https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E7%AD%89%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/" &gt;Stack主题友链等页面美化&lt;/a&gt;」&lt;/em&gt;&lt;br&gt;
 下面是&lt;strong&gt;Stack&lt;/strong&gt;默认的&lt;strong&gt;links&lt;/strong&gt;页面实现方式&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;

@@ -76,7 +76,7 @@
 &lt;/ol&gt;
 &lt;h3 id="文章封面"&gt;文章封面
 &lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://x.com/RSyaooooo/status/1836575756358459883" target="_blank" rel="noopener"
-&gt;遙@RSyaooooo&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Stack主题友链页面美化</title><link>https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/</link><pubDate>Tue, 24 Jun 2025 21:05:33 +0800</pubDate><guid>https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/</guid><description>&lt;img src="https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/cover.webp" alt="Featured image of post Stack主题友链页面美化" /&gt;&lt;h2 id="前言"&gt;前言
+&gt;遙@RSyaooooo&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Stack主题友链等页面美化</title><link>https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E7%AD%89%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/</link><pubDate>Tue, 24 Jun 2025 21:05:33 +0800</pubDate><guid>https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E7%AD%89%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/</guid><description>&lt;img src="https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E7%AD%89%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/cover.webp" alt="Featured image of post Stack主题友链等页面美化" /&gt;&lt;h2 id="前言"&gt;前言
 &lt;/h2&gt;&lt;p&gt;Stack默认的友链是一行一个，友链一多就会导致页面很长，影响美观。&lt;br&gt;
 本来是准备参考 &lt;em&gt;「&lt;a class="link" href="./#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" &gt;建站技术 | 我的链接页面是如何实现的？&lt;/a&gt;」&lt;/em&gt; 这篇来设置成三列的，但是其HTML文件的内容给的不是很完整，导致完全不熟悉Hugo语法的我没法成功复现，所以就来记录一下。&lt;/p&gt;
 &lt;h2 id="代码"&gt;代码
@@ -129,6 +129,12 @@
 &lt;/span&gt;&lt;span class="lnt"&gt;43
 &lt;/span&gt;&lt;span class="lnt"&gt;44
 &lt;/span&gt;&lt;span class="lnt"&gt;45
+&lt;/span&gt;&lt;span class="lnt"&gt;46
+&lt;/span&gt;&lt;span class="lnt"&gt;47
+&lt;/span&gt;&lt;span class="lnt"&gt;48
+&lt;/span&gt;&lt;span class="lnt"&gt;49
+&lt;/span&gt;&lt;span class="lnt"&gt;50
+&lt;/span&gt;&lt;span class="lnt"&gt;51
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-scss" data-lang="scss"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//链接页面//链接页面
@@ -175,6 +181,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nc"&gt;.article-image&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 给文章卡片、友链卡片等的图标添加圆角
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="na"&gt;border-radius&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nc"&gt;.section-image&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 给categories的图标添加圆角
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="na"&gt;object-fit&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="ni"&gt;cover&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;border-radius&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -353,7 +365,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;因为我的习惯是直接使用友链网站的图片链接，所以这里把 &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 的 &lt;code&gt;src&lt;/code&gt; 直接设置成了json中的image参数。&lt;/p&gt;
 &lt;h2 id="最终效果"&gt;最终效果
-&lt;/h2&gt;&lt;p&gt;&lt;img src="https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/final-effect.webp"
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E7%AD%89%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/final-effect.webp"
 width="3835"
 height="2160"
 loading="lazy"
@@ -587,7 +599,7 @@ data-flex-basis="426px"
 &lt;li&gt;归档页面创建这个文件即可：&lt;strong&gt;content/page/archives/index.md&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="链接"&gt;链接
-&lt;/h3&gt;&lt;p&gt;这一部分可以参考 &lt;em&gt;「&lt;a class="link" href="https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/" &gt;Stack主题友链页面美化&lt;/a&gt;」&lt;/em&gt;&lt;br&gt;
+&lt;/h3&gt;&lt;p&gt;这一部分可以参考 &lt;em&gt;「&lt;a class="link" href="https://www.trrw.tech/p/stack%E4%B8%BB%E9%A2%98%E5%8F%8B%E9%93%BE%E7%AD%89%E9%A1%B5%E9%9D%A2%E7%BE%8E%E5%8C%96/" &gt;Stack主题友链等页面美化&lt;/a&gt;」&lt;/em&gt;&lt;br&gt;
 下面是&lt;strong&gt;Stack&lt;/strong&gt;默认的&lt;strong&gt;links&lt;/strong&gt;页面实现方式&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;

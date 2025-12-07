@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on Trrrrw's Blog</title><link>https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on Trrrrw's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 25 Oct 2025 19:30:50 +0800</lastBuildDate><atom:link href="https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>解决EdgeOnePages证书错误</title><link>https://www.trrw.tech/p/%E8%A7%A3%E5%86%B3edgeonepages%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF/</link><pubDate>Sat, 25 Oct 2025 19:30:50 +0800</pubDate><guid>https://www.trrw.tech/p/%E8%A7%A3%E5%86%B3edgeonepages%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF/</guid><description>&lt;img src="https://www.trrw.tech/p/%E8%A7%A3%E5%86%B3edgeonepages%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF/cover.webp" alt="Featured image of post 解决EdgeOnePages证书错误" /&gt;&lt;p&gt;原因就是设置自定义域名以及证书后，EdgeOne可能会使用一个错误的证书&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://www.trrw.tech/p/%E8%A7%A3%E5%86%B3edgeonepages%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF/edgeone-fault-ssl.webp"
-width="1881"
-height="1080"
-loading="lazy"
-alt="EdgeOne可能会使用一个错误的证书"
-class="gallery-image"
-data-flex-grow="174"
-data-flex-basis="418px"
-&gt;&lt;/p&gt;
-&lt;p&gt;解决方法就是重新部署一遍证书，然后等
-&lt;img src="meme-griseo.webp" width=100 /&gt;&lt;/p&gt;
-&lt;h2 id="附录"&gt;附录
-&lt;/h2&gt;&lt;h3 id="文章封面"&gt;文章封面
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://x.com/Yu_Hydra0319/status/1980326527909908763" target="_blank" rel="noopener"
-&gt;X@Yu_Hydra0319&lt;/a&gt;&lt;/p&gt;</description></item><item><title>VSCode 配置 C、C++ 编程运行环境</title><link>https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link><pubDate>Mon, 02 Jun 2025 23:03:45 +0800</pubDate><guid>https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid><description>&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/cover.webp" alt="Featured image of post VSCode 配置 C、C++ 编程运行环境" /&gt;&lt;h2 id="前言"&gt;前言
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on Trrrrw's Blog</title><link>https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on Trrrrw's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 02 Jun 2025 23:03:45 +0800</lastBuildDate><atom:link href="https://www.trrw.tech/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>VSCode 配置 C、C++ 编程运行环境</title><link>https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link><pubDate>Mon, 02 Jun 2025 23:03:45 +0800</pubDate><guid>https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid><description>&lt;img src="https://www.trrw.tech/p/vscode-%E9%85%8D%E7%BD%AE-cc-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/cover.webp" alt="Featured image of post VSCode 配置 C、C++ 编程运行环境" /&gt;&lt;h2 id="前言"&gt;前言
 &lt;/h2&gt;&lt;p&gt;前段时间从VSCode换到了字节的Trae，发现超级好用。于是就把Clion和VSCode都卸载了，但是Trae没法安装VSCode的C/C++插件，所以就研究了一下怎么在Trae中使用MSVC+CMake+Clang-Format来写C/C++代码&lt;/p&gt;
 &lt;h2 id="msvc"&gt;MSVC
 &lt;/h2&gt;&lt;p&gt;前往 &lt;a class="link" href="https://visualstudio.microsoft.com/zh-hans/downloads/" target="_blank" rel="noopener"
